@@ -32,11 +32,6 @@ button {
   text-align: center;
 }
 
-.thumbnail {
-  width: 100%;
-  object-fit: cover;
-}
-
 .title {
   text-align: left;
 }
@@ -47,4 +42,38 @@ h1 {
 
 h2 {
   font-size: 1em;
+}
+
+/* ============================
+        HEADER
+=============================== */
+
+header {
+  height: 5vh;
+  background: #040F14;
+}
+
+/* ============================
+        GAME ITEM
+=============================== */
+
+.GameItem {
+  border: 1px solid #000;
+  width: 40%;
+  border-radius: 50px;
+  background: #102130;
+}
+
+.thumbnail {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.description {
+  border: 1px solid #000;
+}
+
+.bottomIcons {
+  border: 1px solid #000;
 }
