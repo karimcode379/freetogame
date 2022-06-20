@@ -20,7 +20,6 @@ const RecentlyFour = () => {
     };
     console.log(recentlyFour)
 
-
     return (<div>
         {recentlyFour.map(elt =>
             <GameItem
