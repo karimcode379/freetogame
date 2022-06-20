@@ -13,22 +13,115 @@ html {
 }
 
 /********************************* 
-              NAV
+NAV
 *********************************/
+.relativeParent {
+  position: relative;
+}
+
 nav {
+  min-width: 50px;
   width: 5vw;
   height: 100vh;
   background-color: black;
+  border-right: 1px solid white;
 }
 
-nav section {
-  padding: 10px 0;
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-nav section div {
+nav>section {
+  padding: 10px 0 15vh 0;
+}
+
+nav>section div {
   background-color: white;
   height: 5px;
   width: 3vw;
   border-radius: 5px;
   margin: 7px;
+}
+
+.navImg {
+  height: 25px;
+  width: 25px;
+  margin: 5vw 0;
+}
+
+.navGamepad {
+  height: 50px;
+  width: 50px;
+}
+
+/* **************************
+          hideNav
+************************** */
+
+div>section {
+  width: 250px;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slideMenu {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.noSlideMenu {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: -250px;
+}
+
+.hideNav {
+  width: 250px;
+  height: 100vh;
+  background-color: black;
+}
+
+.hideNav div a {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 15px;
+  width: 30vw;
+  max-width: 250px;
+  height: 5vh;
+}
+
+.smallImg {
+  margin: 0 2vw;
+}
+
+.flexColumnHide {
+  display: flex;
+  flex-direction: column;
+}
+
+.rightX {
+  margin: 10px 5% 17.3vh 0;
+  color: white;
+  font-size: 3rem;
+  padding: 0 0 9px 0;
+}
+
+.flexRow {
+  display: flex;
+  align-items: center;
+}
+
+.aTag {
+  margin: 3vh 0;
+  width: 10vw;
+  text-decoration: none;
 }
