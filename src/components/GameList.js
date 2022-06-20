@@ -13,6 +13,7 @@ const GameList = () => {
                     short_description={elt.short_description}
                     platform={elt.platform}
                     genre={elt.genre}
+                    data={data}
                 />
             )}
         </div>

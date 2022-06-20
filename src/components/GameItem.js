@@ -8,7 +8,7 @@ const GameItem = (props) => {
       <div>
         <h3>{props.title}</h3>
         <p>{props.short_description}</p>
-        <Link to={`/gamedetail/${props.id}`}>READ MORE</Link>
+        <Link to={`/gamedetail/${props.id}`} state={props.data}>READ MORE</Link>
       </div>
       {/* nächstes div ist für die bottom icons */}
       <div>
