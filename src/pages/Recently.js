@@ -1,7 +1,25 @@
-const Recently = () => {
-    return (<div>
+import data from './../data';
+import GameItem from './GameItem';
 
-    </div>);
+const Recently = () => {
+
+    const sortedRecently = data.sort((a, b) => b.id - a.id);
+
+    return (
+        <div>
+            {/* Header hier */}
+            {sortedRecently.map(elt =>
+                <GameItem
+                    key={elt.id}
+                    id={elt.id}
+                    thumbnail={elt.thumbnail}
+                    title={elt.title}
+                    short_description={elt.short_description}
+                    platform={elt.platform}
+                    genre={elt.genre}
+                />)}
+        </div>
+    );
 }
 
 export default Recently;

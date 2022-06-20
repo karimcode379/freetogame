@@ -1,4 +1,4 @@
-import "./App.css";
+import './App.css';
 import { Route, Routes } from "react-router-dom";
 import GameList from "./components/GameList";
 import Home from "./pages/Home";
@@ -16,7 +16,7 @@ function App() {
         <Route path="/gamedetail/:id" element={<GameDetail />} />
         <Route path="/recently" element={<Recently />} />
       </Routes>
-    </div>
+    </div >
   );
 }
 
