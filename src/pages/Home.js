@@ -1,7 +1,11 @@
-const Home = () => {
-    return (<div>
+import GameList from './../components/GameList';
 
-    </div>);
+const Home = () => {
+    return (
+        <div>
+
+        </div>
+    );
 }
 
 export default Home;
