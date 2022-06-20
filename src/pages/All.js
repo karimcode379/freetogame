@@ -1,5 +1,5 @@
 import data from './../data';
-import GameItem from './GameItem';
+import GameItem from './../components/GameItem';
 
 const All = () => {
     return (

@@ -8,7 +8,6 @@ const TopFourBrowser = () => {
     topFourPC.push(data[data.findIndex(obj => obj.id === 516)])
     topFourPC.push(data[data.findIndex(obj => obj.id === 517)])
     topFourPC.push(data[data.findIndex(obj => obj.id === 519)])
-    console.log(topFourPC);
 
     return (<div>
         {topFourPC.map(elt =>

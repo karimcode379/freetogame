@@ -6,7 +6,6 @@ import GameItem from './GameItem';
 const RecentlyFour = () => {
 
     const sortedRecently = data.sort((a, b) => b.id - a.id);
-    console.log(sortedRecently);
     const [recentlyFour, setRecentlyFour] = useState([]);
 
     useEffect(() => {
@@ -18,7 +17,6 @@ const RecentlyFour = () => {
             setRecentlyFour(recentlyFour => [...recentlyFour, sortedRecently[i]])
         }
     };
-    console.log(recentlyFour)
 
     return (<div>
         {recentlyFour.map(elt =>
