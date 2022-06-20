@@ -2,7 +2,7 @@ import vector from '../img/Vector 1.svg';
 import games from '../img/Games.png';
 import plus from '../img/Union.png';
 import { useState } from 'react';
-
+import { Link } from "react-router-dom";
 
 
 const NavBar = () => {
@@ -24,9 +24,9 @@ const NavBar = () => {
                     <div></div>
                 </section>
                 <div className="flexColumn">
-                    <img className="navImg" src={vector} alt="house" />
-                    <img className="navImg navGamepad" src={games} alt="gamepad" />
-                    <img className="navImg" src={plus} alt="plus" />
+                    <Link to="/"><img className="navImg" src={vector} alt="house" /></Link>
+                    <Link to="/all"><img className="navImg navGamepad" src={games} alt="gamepad" /></Link>
+                    <Link to="/recently"><img className="navImg" src={plus} alt="plus" /></Link>
                 </div>
             </nav>
 
@@ -36,9 +36,9 @@ const NavBar = () => {
                     <div className="rightX" onClick={notMenu}>x</div>
                 </section>
                 <div className="flexColumnHide">
-                    <a className="aTag flexRow " href="#"><img className="navImg smallImg" src={vector} alt=" house" />Home</a>
-                    <a className="aTag flexRow" href="#"><img className="navImg navGamepad" src={games} alt=" gamepad" />All Games</a>
-                    <a className="aTag flexRow" href="#"><img className="navImg smallImg" src={plus} alt=" plus" />Recently Added</a>
+                    <Link to="/" className="aTag flexRow "><img className="navImg smallImg" src={vector} alt=" house" />Home</Link>
+                    <Link to="/all" className="aTag flexRow"><img className="navImg navGamepad" src={games} alt=" gamepad" />All Games</Link>
+                    <Link to="/recently" className="aTag flexRow"><img className="navImg smallImg" src={plus} alt=" plus" />Recently Added</Link>
                 </div>
 
             </section>
