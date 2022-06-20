@@ -1,5 +1,6 @@
 import RecentlyFour from './../components/RecentlyFour';
 import TopFourPC from '../components/TopFourPC';
+import TopFourBrowser from '../components/TopFourBrowser';
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             <TopFourPC />
             <Link to="/all">SHOW MORE</Link>
             <h2>Top 4 Games for Browser in June 2021</h2>
+            <TopFourBrowser />
             <Link to="/all">SHOW MORE</Link>
         </div>
     )
