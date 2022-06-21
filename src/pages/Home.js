@@ -3,6 +3,7 @@ import TopFourPC from '../components/TopFourPC';
 import TopFourBrowser from '../components/TopFourBrowser';
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
+import Header from '../components/Header';
 
 const Home = () => {
 
@@ -29,22 +30,26 @@ const Home = () => {
 
     return (
         <div>
-            {/* Header hier */}
+            <Header />
             <h2>Recently Added</h2>
-            <RecentlyFour
-                data={data}
-            />
-            <Link to="/recently">SHOW MORE</Link>
+            {/* <section className="gameItemGrid">
+                <div className="gridItem"> */}
+            <RecentlyFour />
+            <button className="buttonShowMore">
+                <Link to="/recently">SHOW MORE</Link>
+            </button>
+            {/* </div>
+            </section> */}
             <h2>Top 4 Games for PC in June 2021</h2>
-            <TopFourPC
-                data={data}
-            />
-            <Link to="/all" state={data}>SHOW MORE</Link>
+            <TopFourPC />
+            <button className="buttonShowMore">
+                <Link to="/all">SHOW MORE</Link>
+            </button>
             <h2>Top 4 Games for Browser in June 2021</h2>
-            <TopFourBrowser
-                data={data}
-            />
-            <Link to="/all" state={data}>SHOW MORE</Link>
+            <TopFourBrowser />
+            <button className="buttonShowMore">
+                <Link to="/all">SHOW MORE</Link>
+            </button>
         </div>
     )
 }

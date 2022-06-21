@@ -11,7 +11,7 @@ const TopFourBrowser = (props) => {
     const topFourBrowser = one.concat(two).concat(three).concat(four);
 
     return (
-        <div>
+        <div className="top4BrowserGrid">
             {topFourBrowser.map(elt =>
                 <GameItem
                     key={elt.id}

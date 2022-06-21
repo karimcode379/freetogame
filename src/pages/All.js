@@ -1,4 +1,7 @@
-import GameList from './../components/GameList';
+import data from './../data';
+import GameItem from './../components/GameItem';
+import Header from './../components/Header';
+
 
 const All = () => {
     return (
@@ -7,6 +10,6 @@ const All = () => {
             <GameList />
         </div>
     );
-}
+};
 
 export default All;

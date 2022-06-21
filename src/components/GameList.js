@@ -39,7 +39,7 @@ const GameList = () => {
                     data={data}
                 />
             )}
-        </div>
+        </div >
     );
 }
 

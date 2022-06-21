@@ -10,7 +10,7 @@ const TopFourPC = (props) => {
     let four = data.filter(obj => obj.id == 1);
     const topFourPC = one.concat(two).concat(three).concat(four);
 
-    return (<div>
+    return (<div className="top4PCGrid">
         {topFourPC.map(elt =>
             <GameItem
                 key={elt.id}
