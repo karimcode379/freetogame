@@ -1,22 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-import data from './../data';
 import GameItem from './GameItem';
 
-const RecentlyFour = () => {
+const RecentlyFour = (props) => {
 
-    const sortedRecently = data.sort((a, b) => b.id - a.id);
-    const [recentlyFour, setRecentlyFour] = useState([]);
-
-    useEffect(() => {
-        getDataHandler();
-    }, []);
-
-    const getDataHandler = () => {
-        for (let i = 0; i < 4; i++) {
-            setRecentlyFour(recentlyFour => [...recentlyFour, sortedRecently[i]])
-        }
-    };
+    const data = props.data;
+    data.sort((a, b) => b.id - a.id);
+    const recentlyFour = data.splice(0, 4);
 
     return (<div>
         {recentlyFour.map(elt =>
