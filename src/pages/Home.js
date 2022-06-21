@@ -34,19 +34,25 @@ const Home = () => {
             <h2>Recently Added</h2>
             {/* <section className="gameItemGrid">
                 <div className="gridItem"> */}
-            <RecentlyFour />
+            <RecentlyFour
+                data={data}
+            />
             <button className="buttonShowMore">
                 <Link to="/recently">SHOW MORE</Link>
             </button>
             {/* </div>
             </section> */}
             <h2>Top 4 Games for PC in June 2021</h2>
-            <TopFourPC />
+            <TopFourPC
+                data={data}
+            />
             <button className="buttonShowMore">
                 <Link to="/all">SHOW MORE</Link>
             </button>
             <h2>Top 4 Games for Browser in June 2021</h2>
-            <TopFourBrowser />
+            <TopFourBrowser
+                data={data}
+            />
             <button className="buttonShowMore">
                 <Link to="/all">SHOW MORE</Link>
             </button>

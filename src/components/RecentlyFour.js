@@ -12,8 +12,6 @@ const RecentlyFour = (props) => {
 
     return (
         <main className="gameItemGrid">
-
-
             {recentlyFour.map((elt) =>
                 <GameItem
                     key={elt.id}

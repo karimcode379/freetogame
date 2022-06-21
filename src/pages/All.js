@@ -1,5 +1,5 @@
 import data from './../data';
-import GameItem from './../components/GameItem';
+import GameList from './../components/GameList';
 import Header from './../components/Header';
 
 

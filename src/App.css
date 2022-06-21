@@ -160,6 +160,7 @@ header {
 .top4PCGrid {
   display: grid;
   grid-template-columns: auto auto auto auto;
+}
 
 /********************************* 
             GENERALS
