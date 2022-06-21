@@ -5,11 +5,13 @@ import GameDetail from "./pages/GameDetail";
 import Recently from "./pages/Recently";
 import Home from "./pages/Home"
 import { useState, useEffect } from 'react';
+import Header from '../src/components/Header';
 
 function App() {
 
   return (
     <div className="App">
+      <Header />
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />

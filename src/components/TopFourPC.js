@@ -9,19 +9,23 @@ const TopFourPC = () => {
     topFourPC.push(data[data.findIndex(obj => obj.id === 517)])
     topFourPC.push(data[data.findIndex(obj => obj.id === 519)])
 
-    return (<div className="top4PCGrid">
-        {topFourPC.map(elt =>
-            <GameItem
-                key={elt.id}
-                id={elt.id}
-                thumbnail={elt.thumbnail}
-                title={elt.title}
-                short_description={elt.short_description}
-                platform={elt.platform}
-                genre={elt.genre}
-            />
-        )}
-    </div>);
+    return (<main className="top4PCGrid">
+        <div className="top4PC_gridItem">
+            <section className="top4PC">
+                {topFourPC.map(elt =>
+                    <GameItem
+                        key={elt.id}
+                        id={elt.id}
+                        thumbnail={elt.thumbnail}
+                        title={elt.title}
+                        short_description={elt.short_description}
+                        platform={elt.platform}
+                        genre={elt.genre}
+                    />
+                )}
+            </section>
+        </div>
+    </main>);
 }
 
 export default TopFourPC;

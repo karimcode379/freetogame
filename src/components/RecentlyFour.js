@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import data from './../data';
 import GameItem from './GameItem';
 
@@ -21,8 +22,6 @@ const RecentlyFour = () => {
 
     return (
         <main className="gameItemGrid">
-
-
             {recentlyFour.map((elt) =>
                 <GameItem
                     key={elt.id}
@@ -35,8 +34,7 @@ const RecentlyFour = () => {
                 />
             )
             }
-
-        </main>);
+        </main >);
 }
 
 export default RecentlyFour;

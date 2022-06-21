@@ -1,6 +1,6 @@
 import data from './../data';
 import GameItem from './../components/GameItem';
-import Header from './../components/Header';
+
 
 const Recently = () => {
 
@@ -8,8 +8,6 @@ const Recently = () => {
 
     return (
         <div>
-            <Header />
-            {/* <main className="gameItemGrid"> */}
             {sortedRecently.map(elt =>
                 <GameItem
                     key={elt.id}
@@ -20,7 +18,6 @@ const Recently = () => {
                     platform={elt.platform}
                     genre={elt.genre}
                 />)}
-            {/* </main > */}
         </div>
     );
 }
