@@ -15,7 +15,7 @@ const GameList = () => {
                     genre={elt.genre}
                 />
             )}
-        </div>
+        </div >
     );
 }
 

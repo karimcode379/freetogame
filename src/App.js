@@ -7,9 +7,11 @@ import All from "./pages/All";
 import GameDetail from "./pages/GameDetail";
 import Recently from "./pages/Recently";
 import Home from "./pages/Home"
+import { useState, useEffect } from 'react';
 
 
 function App() {
+
   return (
     <div className="App">
       <NavBar />
@@ -23,5 +25,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

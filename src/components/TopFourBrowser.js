@@ -9,7 +9,7 @@ const TopFourBrowser = () => {
     topFourPC.push(data[data.findIndex(obj => obj.id === 517)])
     topFourPC.push(data[data.findIndex(obj => obj.id === 519)])
 
-    return (<div>
+    return (<div className="top4BrowserGrid">
         {topFourPC.map(elt =>
             <GameItem
                 key={elt.id}

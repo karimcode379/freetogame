@@ -2,20 +2,31 @@ import RecentlyFour from './../components/RecentlyFour';
 import TopFourPC from '../components/TopFourPC';
 import TopFourBrowser from '../components/TopFourBrowser';
 import { Link } from "react-router-dom";
+import Header from '../components/Header';
 
 const Home = () => {
     return (
         <div>
-            {/* Header hier */}
+            <Header />
             <h2>Recently Added</h2>
+            {/* <section className="gameItemGrid">
+                <div className="gridItem"> */}
             <RecentlyFour />
-            <Link to="/recently">SHOW MORE</Link>
+            <button className="buttonShowMore">
+                <Link to="/recently">SHOW MORE</Link>
+            </button>
+            {/* </div>
+            </section> */}
             <h2>Top 4 Games for PC in June 2021</h2>
             <TopFourPC />
-            <Link to="/all">SHOW MORE</Link>
+            <button className="buttonShowMore">
+                <Link to="/all">SHOW MORE</Link>
+            </button>
             <h2>Top 4 Games for Browser in June 2021</h2>
             <TopFourBrowser />
-            <Link to="/all">SHOW MORE</Link>
+            <button className="buttonShowMore">
+                <Link to="/all">SHOW MORE</Link>
+            </button>
         </div>
     )
 }
