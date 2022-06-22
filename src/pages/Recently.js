@@ -6,8 +6,6 @@ const Recently = (props) => {
 
     const location = useLocation();
     let data = location.state ? location.state : props.data;
-    console.log(props.data);
-    console.log(location.state);
 
     data.sort((a, b) => b.id - a.id);
     const recentlyEight = data.splice(0, 8);

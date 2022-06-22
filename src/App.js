@@ -1,7 +1,5 @@
 import './App.css';
 
-import NavBar from './components/NavBar';
-
 import { Route, Routes, Navigate } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 
