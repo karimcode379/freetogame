@@ -1,6 +1,8 @@
 import Header from './../components/Header';
 import React, { useState, useEffect } from 'react';
 import GameItem from './../components/GameItem';
+import AllGames_Header from './../components/AllGames_Header';
+
 
 
 const All = () => {
