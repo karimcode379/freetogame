@@ -25,7 +25,6 @@ const TopFourBrowser = (props) => {
             )}
         </div>
     );
-
 }
 
 export default TopFourBrowser;

@@ -87,7 +87,6 @@ header {
 /* .Logo {
   margin: 2vh 2%;
 }
-
 /* Searchbar */
 /* input[type="text"] {
   background: #385470;
@@ -274,11 +273,9 @@ html {
   justify-content: space-between;
   align-items: center;
 }
-
 .Navigation>section img:nth-of-type(1) {
   margin: auto 30px;
 }
-
 .form input {
   display: inline-block;
   margin: auto 30px;
@@ -295,7 +292,6 @@ html {
   background-position: right;
   background-position-x: 90%;
 }
-
 /* .form input::placeholder {
   margin: 0 0 0 200px;
 } */
@@ -308,7 +304,6 @@ html {
 /*.relativeParent {
   position: relative;
 }
-
 .nav {
   position: fixed;
   min-width: 80px;
@@ -360,11 +355,9 @@ html {
 /*.burger {
   margin: 10px 0 15vh 0;
 }
-
 .burger:hover {
   cursor: pointer;
 }
-
 .burgerMeat {
   background-color: white;
   height: 3px;
@@ -372,15 +365,12 @@ html {
   border-radius: 5px;
   margin: 7px;
 }
-
-
 .redButton {
   background-color: #FF4654;
   border-radius: 15px;
   height: 50px;
   margin: 5vh auto 5vw 0;
 }
-
 .blackButton {
   background-color: black;
   border-radius: 15px;
@@ -397,7 +387,6 @@ html {
   border-radius: 15px;
   padding: 0 15px 0 0;
 }
-
 .relativeParent>section {
   padding-left: 10px;
   min-width: 250px;
@@ -408,7 +397,6 @@ html {
   flex-direction: column;
   align-items: flex-start;
 }
-
 .slideMenu {
   height: 100vh;
   overflow: hidden;
@@ -464,26 +452,21 @@ html {
   height: 100vh;
   background-color: black;
 }
-
 .flexColumnHide {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-
 .rightX {
   color: white;
   font-size: 40px;
   margin: 0 0 15vh 14vw;
 }
-
 .rightX:hover {
   cursor: pointer;
 }
-
 .hideSideLinks>a {
   text-decoration: none;
-
   color: white;
   font-size: 24px;
   height: 50px;
