@@ -247,25 +247,11 @@ TOP 4 GAMES FOR PC
   grid-template-columns: auto auto auto auto;
 }
 
-/********************************* 
-            GENERALS
-*********************************/
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
 /* ******************************** 
               top
 ******************************** */
 
-/*.Navigation>section {
+.Navigation>section {
   margin: 0 auto 0 5vw;
   position: fixed;
   right: 0;
@@ -305,7 +291,7 @@ html {
               NAV
 ******************************** */
 
-/*.relativeParent {
+.relativeParent {
   position: relative;
 }
 
@@ -317,7 +303,106 @@ html {
   background-color: black;
   border-right: 1px solid white;
 }
-  */
+
+.burger {
+  margin: 10px 0 15vh 0;
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+
+.burgerMeat {
+  background-color: white;
+  height: 3px;
+  width: 3vw;
+  border-radius: 5px;
+  margin: 7px;
+}
+
+.redButton {
+  background-color: #FF4654;
+  border-radius: 15px;
+  height: 50px;
+  margin: 5vh auto 5vw 0;
+}
+
+.blackButton {
+  background-color: black;
+  border-radius: 15px;
+  padding: 0 0 0 0;
+  margin: 5vh auto 5vw 0;
+}
+
+/* **************************
+          hideNav
+************************** */
+.redButtonHide {
+  background-color: #FF4654;
+  border-radius: 15px;
+  padding: 0 15px 0 0;
+}
+
+.relativeParent>section {
+  padding-left: 10px;
+  min-width: 250px;
+  width: 17vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.slideMenu {
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 5px
+}
+
+.noSlideMenu {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: -250px;
+}
+
+.hideNav {
+  width: 17vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.flexColumnHide {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.rightX {
+  color: white;
+  font-size: 40px;
+  margin: 0 0 15vh 14vw;
+}
+
+.rightX:hover {
+  cursor: pointer;
+}
+
+.hideSideLinks>a {
+  text-decoration: none;
+
+  color: white;
+  font-size: 24px;
+  height: 50px;
+  margin: 5vh auto 5vw 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .thumbnail_top4PC:nth-of-type(1) {
   border-radius: 30px;
@@ -357,67 +442,6 @@ html {
   width: 63%;
 }
 
-/*.burger {
-  margin: 10px 0 15vh 0;
-}
-
-.burger:hover {
-  cursor: pointer;
-}
-
-.burgerMeat {
-  background-color: white;
-  height: 3px;
-  width: 3vw;
-  border-radius: 5px;
-  margin: 7px;
-}
-
-
-.redButton {
-  background-color: #FF4654;
-  border-radius: 15px;
-  height: 50px;
-  margin: 5vh auto 5vw 0;
-}
-
-.blackButton {
-  background-color: black;
-  border-radius: 15px;
-  padding: 0 0 0 0;
-  margin: 5vh auto 5vw 0;
-}
-*/
-
-/* **************************
-          hideNav
-************************** */
-/*.redButtonHide {
-  background-color: #FF4654;
-  border-radius: 15px;
-  padding: 0 15px 0 0;
-}
-
-.relativeParent>section {
-  padding-left: 10px;
-  min-width: 250px;
-  width: 17vw;
-  height: 100vh;
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.slideMenu {
-  height: 100vh;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin-left: 5px
-}
-*/
 /* RIGHT TITLES */
 .GameItem_Top4PC:nth-of-type(2) h4,
 .GameItem_Top4PC:nth-of-type(3) h4,
@@ -457,38 +481,3 @@ html {
   border: none;
   margin: 0 0 -35vh 65%;
 }
-
-/*
-.hideNav {
-  width: 17vw;
-  height: 100vh;
-  background-color: black;
-}
-
-.flexColumnHide {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.rightX {
-  color: white;
-  font-size: 40px;
-  margin: 0 0 15vh 14vw;
-}
-
-.rightX:hover {
-  cursor: pointer;
-}
-
-.hideSideLinks>a {
-  text-decoration: none;
-
-  color: white;
-  font-size: 24px;
-  height: 50px;
-  margin: 5vh auto 5vw 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}*/
