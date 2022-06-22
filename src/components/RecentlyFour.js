@@ -20,8 +20,7 @@ const RecentlyFour = (props) => {
                 />
             )
             }
-
-        </main>);
+        </main >);
 }
 
 export default RecentlyFour;
