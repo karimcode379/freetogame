@@ -38,7 +38,8 @@ const Home = () => {
                 data={data}
             />
             <button className="buttonShowMore">
-                <Link to="/recently">SHOW MORE</Link>
+                <Link to="/recently" state={data}>SHOW MORE</Link>
+                {/* <Link to={{ pathname: '/pathname', state: data }}>SHOW MORE</Link> */}
             </button>
             {/* </div>
             </section> */}
@@ -47,14 +48,14 @@ const Home = () => {
                 data={data}
             />
             <button className="buttonShowMore">
-                <Link to="/all">SHOW MORE</Link>
+                <Link to="/all" state={data}>SHOW MORE</Link>
             </button>
             <h2>Top 4 Games for Browser in June 2021</h2>
             <TopFourBrowser
                 data={data}
             />
             <button className="buttonShowMore">
-                <Link to="/all">SHOW MORE</Link>
+                <Link to="/all" state={data}>SHOW MORE</Link>
             </button>
         </div>
     )
