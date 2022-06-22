@@ -359,6 +359,7 @@ TOP 4 GAMES FOR PC
 }
 
 .slideMenu {
+  transition: all 2s;
   height: 100vh;
   overflow: hidden;
   position: fixed;
@@ -389,6 +390,7 @@ TOP 4 GAMES FOR PC
 .rightX {
   color: white;
   font-size: 40px;
+  text-align: right;
   margin: 0 0 15vh 14vw;
 }
 

@@ -50,7 +50,7 @@ const NavBar = () => {
 
                 <section className={slide ? "noSlideMenu" : "slideMenu"}>
                     <section>
-                        <div className="rightX" onClick={notMenu}>x</div>
+                        <h3 className="rightX" onClick={notMenu}>x</h3>
                     </section>
                     <div className="flexColumnHide hideSideLinks">
                         <NavLink className={({ isActive }) => isActive ? "redButtonHide" : ""} to="/home"><img src={vector} alt=" house" />Home</NavLink>
