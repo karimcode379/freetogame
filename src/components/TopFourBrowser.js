@@ -1,5 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import GameItem from './GameItem';
+
+import data from '../data';
+import GameItem_Top4Browser from './GameItem_Top4Browser';
+
+/*import React, { useState, useEffect } from 'react';
+import GameItem from './GameItem';*/
+
 
 const TopFourBrowser = (props) => {
 
@@ -12,19 +17,32 @@ const TopFourBrowser = (props) => {
 
     return (
         <div className="top4BrowserGrid">
-            {topFourBrowser.map(elt =>
-                <GameItem
+
+            {topFourPC.map(elt =>
+                <GameItem_Top4Browser
+
+            /*{topFourBrowser.map(elt =>
+                <GameItem*/
+
                     key={elt.id}
                     id={elt.id}
                     thumbnail={elt.thumbnail}
                     title={elt.title}
-                    short_description={elt.short_description}
+
+                    //short_description={elt.short_description}
+
+                    //short_description={elt.short_description}
+
                     platform={elt.platform}
                     genre={elt.genre}
                 />
             )}
+
+        </div >);
+
         </div>
     );
+
 }
 
 export default TopFourBrowser;
