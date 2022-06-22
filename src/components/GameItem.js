@@ -5,7 +5,7 @@ const GameItem = (props) => {
   return (
     <div className="GameItem">
       <img src={props.thumbnail} alt="" className="thumbnail" />
-      {/* nächstes div ist für den sichtbaren border-bottom */}
+      {/* Card Body - Title, Description, Read More */}
       <div className="cardBody">
         <h3>{props.title}</h3>
         <p>{props.short_description}</p>

@@ -7,6 +7,7 @@ import Header from '../components/Header';
 const Home = () => {
     return (
         <div>
+            <Header />
             <h2>Recently Added</h2>
             <RecentlyFour />
             <button className="buttonShowMore">
@@ -17,7 +18,7 @@ const Home = () => {
             <button className="buttonShowMore">
                 <Link to="/all">SHOW MORE</Link>
             </button>
-            <h2>Top 4 Games for Browser in June 2021</h2>
+            <h2>Top 4 Games for Browser in June 2022</h2>
             <TopFourBrowser />
             <button className="buttonShowMore">
                 <Link to="/all">SHOW MORE</Link>

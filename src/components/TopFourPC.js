@@ -1,5 +1,5 @@
 import data from '../data';
-import GameItem from './GameItem';
+import GameItem_Top4PC from './GameItem_Top4PC';
 
 const TopFourPC = () => {
 
@@ -10,21 +10,21 @@ const TopFourPC = () => {
     topFourPC.push(data[data.findIndex(obj => obj.id === 519)])
 
     return (<main className="top4PCGrid">
-        <div className="top4PC_gridItem">
-            <section className="top4PC">
-                {topFourPC.map(elt =>
-                    <GameItem
-                        key={elt.id}
-                        id={elt.id}
-                        thumbnail={elt.thumbnail}
-                        title={elt.title}
-                        short_description={elt.short_description}
-                        platform={elt.platform}
-                        genre={elt.genre}
-                    />
-                )}
-            </section>
-        </div>
+
+
+        {topFourPC.map(elt =>
+            <GameItem_Top4PC
+                key={elt.id}
+                id={elt.id}
+                thumbnail={elt.thumbnail}
+                title={elt.title}
+                short_description={elt.short_description}
+                platform={elt.platform}
+                genre={elt.genre}
+            />
+        )}
+
+
     </main>);
 }
 

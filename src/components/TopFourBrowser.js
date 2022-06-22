@@ -1,5 +1,5 @@
 import data from '../data';
-import GameItem from './GameItem';
+import GameItem_Top4Browser from './GameItem_Top4Browser';
 
 const TopFourBrowser = () => {
 
@@ -12,12 +12,12 @@ const TopFourBrowser = () => {
     return (
         <div className="top4BrowserGrid">
             {topFourPC.map(elt =>
-                <GameItem
+                <GameItem_Top4Browser
                     key={elt.id}
                     id={elt.id}
                     thumbnail={elt.thumbnail}
                     title={elt.title}
-                    short_description={elt.short_description}
+                    //short_description={elt.short_description}
                     platform={elt.platform}
                     genre={elt.genre}
                 />
