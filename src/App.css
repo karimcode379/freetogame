@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 
 * {
   margin: 0;
@@ -22,6 +23,7 @@ body {
 
 button {
   font-family: "Oswald";
+  font-size: 18px;
   background: #FF4654;
   color: #fff;
   border: none;
@@ -48,30 +50,30 @@ a {
   margin-bottom: 10vh;
 }
 
-.title {
+/* .title {
   text-align: left;
-}
+  background: green;
+} */
 
+/* HEADER HEADLINE */
 h1 {
-  font-size: 4em;
+  font-size: 48px;
   margin: 45vh 0 5vh 10%;
-  width: 30%;
+  width: 25%;
   font-family: "Oswald";
   position: absolute;
 }
 
+/* SECTION TITLE - Recently Added, Top 4 Games */
 h2 {
   font-family: "Oswald";
-  font-size: 1.5em;
+  font-size: 3em;
   margin: 0 0 5vh 10%;
 }
 
-h3 {
-  margin-bottom: 5vh;
-}
 
 /* ============================
-        HEADER
+HEADER
 =============================== */
 
 header {
@@ -79,187 +81,19 @@ header {
   background: #040F14;
 }
 
-
 .Hero {
   width: 100%;
-}
-
-/* .Logo {
-  margin: 2vh 2%;
-}
-
-/* Searchbar */
-/* input[type="text"] {
-  background: #385470;
-  padding: 1vh 1%;
-  border-radius: 5px;
-  border: none;
-  margin-left: 70%;
-  width: 15%;
-} */
-
-/* Submit Button Searchbar */
-/*input[type="submit"] {
-  background: #385470;
-  border: none;
-  cursor: pointer;
-  margin-left: -50px;
-  height: 20px;
-  width: 50px;
-  content: "🔍";
-} */
-/* ============================
-        GAME ITEM
-=============================== */
-
-/* Items / Cards */
-.GameItem {
   border-radius: 50px;
-  background: #102130;
+  max-width: 1600px;
+  min-width: 300px;
+  margin: 0 auto;
+  display: block
 }
 
-/* Container */
-.gameItemGrid,
-.top4BrowserGrid {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  margin-bottom: 5vh;
-  padding: 0 40% 0 10%;
-  gap: 2%;
-}
-
-.gridItem {
-  /* background: orange; */
-  /* grid-column-start: 1;
-  grid-column-end: 3; */
-}
-
-.top4PC_gridItem {
-  /* background: aqua; */
-}
-
-.gameCard img,
-.thumbnail {
-  width: 20vw;
-  border-radius: 20px;
-  margin-bottom: 3vh;
-}
-
-/* .gameCard {
-  margin: 0 0 5vh 10%;
-  background: #102130;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 25px;
-  background: green;
-} */
-
-.cardBody {
-  font-family: Arial;
-  margin: 0 0 5vh 10%;
-  height: 25vh;
-}
-
-/* Description */
-.cardBody p {
-  /* margin-bottom: 5vh; */
-  padding-right: 10%;
-  height: 15vh;
-  overflow: hidden;
-  text-overflow: "...";
-  text-overflow: ellipsis;
-}
-
-/* Read More */
-.cardButton {
-  /* margin-left: 25%; */
-  padding: 1vh 10%;
-}
-
-/* Card Bottom */
-.bottomIcons {
-  border-top: 1px solid #fff;
-  margin: 0 10%;
-}
-
-.cardPlattform {
-  border: 1px solid #FF4654;
-  border-radius: 7px;
-  display: inline;
-  font-family: "Oswald";
-}
-
-.cardPlattform img {
-  margin: 2vh 10%;
-}
-
-.cardGenre {
-  border: 1px solid #FF4654;
-  border-radius: 7px;
-  display: inline;
-  margin-left: 2%;
-  font-family: "Oswald";
-}
-
-/* ============================
-    TOP 4 GAMES FOR BROWSER
-=============================== */
-
-.top4BrowserGrid {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-}
-
-.top4Browser_cardBody {
-  font-family: Arial;
-  margin: 0 0 5vh 10%;
-  height: 12vh;
-}
-
-/* ============================
-TOP 4 GAMES FOR PC
-=============================== */
-
-
-.top4PC {
-  border-radius: 50px;
-  background: #102130;
-}
-
-.GameItem_Top4PC {
-  border-radius: 30px;
-  background: #102130;
-}
-
-.top4PCGrid {
-  display: grid;
-  padding: 0 7% 0 10%;
-  margin-bottom: 10vh;
-  gap: 2%;
-  grid-template-areas:
-    'A B'
-    'A C'
-    'A D';
-}
-
-.top4PCGrid {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-}
 
 /********************************* 
             GENERALS
 *********************************/
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
 
 /* ******************************** 
               top
@@ -319,43 +153,52 @@ html {
 }
   */
 
-.thumbnail_top4PC:nth-of-type(1) {
-  border-radius: 30px;
+/* body {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-/* LEFT Grid Item  */
-.GameItem_Top4PC:nth-of-type(1) {
-  grid-area: A;
-  background: orange;
-  width: 36vw;
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+} */
+
+
+/*
+.hideNav {
+  width: 17vw;
+  height: 100vh;
+  background-color: black;
 }
 
-.GameItem_Top4PC:nth-of-type(1) img {
-  width: 100%;
+.flexColumnHide {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-/* FIRST RIGHT Grid Item  */
-.GameItem_Top4PC:nth-of-type(2) {
-  grid-area: B;
-  height: 30vh;
-  width: 45vw;
+.rightX {
+  color: white;
+  font-size: 40px;
+  margin: 0 0 15vh 14vw;
 }
 
-.GameItem_Top4PC:nth-of-type(3) {
-  grid-area: C;
-  height: 30vh;
+.rightX:hover {
+  cursor: pointer;
 }
 
-.GameItem_Top4PC:nth-of-type(4) {
-  grid-area: D;
-  height: 30vh;
-}
+.hideSideLinks>a {
+  text-decoration: none;
 
-.GameItem_Top4PC:nth-of-type(2) img,
-.GameItem_Top4PC:nth-of-type(3) img,
-.GameItem_Top4PC:nth-of-type(4) img {
-  width: 63%;
-}
+  color: white;
+  font-size: 24px;
+  height: 50px;
+  margin: 5vh auto 5vw 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}*/
+
 
 /*.burger {
   margin: 10px 0 15vh 0;
@@ -418,77 +261,249 @@ html {
   margin-left: 5px
 }
 */
+
+/* ============================
+GAME ITEM
+=============================== */
+
+/* ITEM / CARDS TITLE */
+h3 {
+  margin-bottom: 5vh;
+  font-size: 18px;
+  font-family: "Oswald";
+}
+
+/* Items / Cards an sich */
+.GameItem {
+  border-radius: 24px;
+  background: #102130;
+}
+
+/* Container */
+.gameItemGrid,
+.top4BrowserGrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin-bottom: 50px;
+  padding: 0 40% 0 10%;
+  gap: 2%;
+}
+
+.gridItem {
+  /* background: orange; */
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+}
+
+.top4PC_gridItem {
+  /* background: aqua; */
+}
+
+.gameCard img,
+.thumbnail {
+  width: 20vw;
+  border-radius: 24px;
+  margin-bottom: 3vh;
+}
+
+/* .gameCard {
+  margin: 0 0 5vh 10%;
+  background: #102130;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+  background: green;
+} */
+
+.cardBody {
+  font-family: Arial;
+  margin: 0 0 5vh 10%;
+  height: 25vh;
+}
+
+/* Description */
+.cardBody p {
+  font-family: 'Titillium Web', sans-serif;
+  color: #AFC7DF;
+  font-size: 16px;
+  padding-right: 10%;
+  height: 110px;
+  overflow: hidden;
+  text-overflow: "...";
+  text-overflow: ellipsis;
+}
+
+/* Read More Button */
+.cardButton {
+  padding: 1vh 10%;
+}
+
+/* Card Bottom */
+.bottomIcons {
+  border-top: 1px solid #fff;
+  margin: 25px 10%;
+  padding: 25px 0;
+}
+
+.cardPlattform {
+  border: 1px solid #FF4654;
+  padding: 6px 12px;
+  border-radius: 15px;
+  display: inline;
+  font-family: "Oswald";
+  font-size: 15px;
+}
+
+.cardPlattform img {
+  margin: 2vh 10%;
+}
+
+.cardGenre {
+  border: 1px solid #FF4654;
+  padding: 6px 12px;
+  border-radius: 15px;
+  display: inline;
+  margin-left: 5%;
+  font-family: "Oswald";
+  font-size: 15px;
+}
+
+/* ============================
+    TOP 4 GAMES FOR BROWSER
+=============================== */
+
+.top4BrowserGrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.top4Browser_cardBody {
+  font-family: Arial;
+  margin: 0 0 5vh 10%;
+  height: 12vh;
+}
+
+/* ============================
+TOP 4 GAMES FOR PC
+=============================== */
+
+.top4PC {
+  border-radius: 50px;
+  background: #102130;
+}
+
+.GameItem_Top4PC {
+  border-radius: 30px;
+  background: #102130;
+}
+
+.top4PCGrid {
+  display: grid;
+  padding: 0 7% 0 10%;
+  margin-bottom: 10vh;
+  gap: 2%;
+  grid-template-areas:
+    'A B'
+    'A C'
+    'A D';
+}
+
+.top4PCGrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+
+.thumbnail_top4PC:nth-of-type(1) {
+  border-radius: 30px;
+}
+
+/* LEFT Grid Item  */
+.GameItem_Top4PC:nth-of-type(1) {
+  grid-area: A;
+  /* background: orange; */
+  width: 36vw;
+}
+
+.GameItem_Top4PC:nth-of-type(1) img {
+  width: 100%;
+}
+
+/* FIRST RIGHT Grid Item  */
+.GameItem_Top4PC:nth-of-type(2) {
+  grid-area: B;
+  height: 30vh;
+  width: 45vw;
+}
+
+.GameItem_Top4PC:nth-of-type(3) {
+  grid-area: C;
+  height: 30vh;
+}
+
+.GameItem_Top4PC:nth-of-type(4) {
+  grid-area: D;
+  height: 30vh;
+}
+
+.GameItem_Top4PC:nth-of-type(2) img,
+.GameItem_Top4PC:nth-of-type(3) img,
+.GameItem_Top4PC:nth-of-type(4) img {
+  width: 63%;
+}
+
+
+.GameItem_Top4PC:nth-of-type(1) .top4PC_cardBody {
+  /* background: purple; */
+  margin: 20vh 10%;
+}
+
+/* READ MORE BUTTON */
+.GameItem_Top4PC:nth-of-type(2) .top4PC_cardButton,
+.GameItem_Top4PC:nth-of-type(3) .top4PC_cardButton,
+.GameItem_Top4PC:nth-of-type(4) .top4PC_cardButton {
+  margin: 0 0 15vh 65%;
+  padding: 1vh 3%;
+}
+
+.GameItem_Top4PC:nth-of-type(1) .top4PC_cardButton {
+  padding: 1vh 3%;
+}
+
+
 /* RIGHT TITLES */
 .GameItem_Top4PC:nth-of-type(2) h4,
 .GameItem_Top4PC:nth-of-type(3) h4,
 .GameItem_Top4PC:nth-of-type(4) h4 {
-  font-size: 1em;
-  margin-top: -20vh;
-  margin-left: 65%;
-}
-
-.GameItem_Top4PC:nth-of-type(1) .top4PC_cardBody {
-  background: purple;
-}
-
-.GameItem_Top4PC:nth-of-type(1) .top4PC_cardButton {
-  margin: 0 0 -15vh 10%;
-  background: blue;
-}
-
-.top4PC_bottomIcons:nth-of-type(1) {
-  margin: 0 0 40vh 0;
-}
-
-
-.GameItem_Top4PC:nth-of-type(2) h4,
-.GameItem_Top4PC:nth-of-type(3) h4,
-.GameItem_Top4PC:nth-of-type(4) h4 {
-  font-size: 1em;
+  font-size: 18px;
+  margin: -25vh 0 36px 65%;
+  /* background: green; */
+  font-family: "Oswald";
 }
 
 .GameItem_Top4PC:nth-of-type(1) h4 {
-  background-color: aqua;
-  margin-bottom: -20vh;
+  /* background-color: aqua; */
+  font-family: "Oswald";
+  font-size: 48px;
+  margin-bottom: 36px;
+  ;
 }
 
 /* PLATTFORM, GENRE */
+.GameItem_Top4PC:nth-of-type(2) .top4PC_bottomIcons,
+.GameItem_Top4PC:nth-of-type(3) .top4PC_bottomIcons,
+.GameItem_Top4PC:nth-of-type(4) .top4PC_bottomIcons {
+  margin: -12vh 0 0 65%;
+  /* background: pink; */
+}
+
+.GameItem_Top4PC:nth-of-type(1) .top4PC_bottomIcons {
+  margin-left: 10%;
+  margin-top: -15vh;
+  /* background: coral; */
+}
+
 .top4PC_bottomIcons {
   border: none;
   margin: 0 0 -35vh 65%;
 }
-
-/*
-.hideNav {
-  width: 17vw;
-  height: 100vh;
-  background-color: black;
-}
-
-.flexColumnHide {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.rightX {
-  color: white;
-  font-size: 40px;
-  margin: 0 0 15vh 14vw;
-}
-
-.rightX:hover {
-  cursor: pointer;
-}
-
-.hideSideLinks>a {
-  text-decoration: none;
-
-  color: white;
-  font-size: 24px;
-  height: 50px;
-  margin: 5vh auto 5vw 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}*/
