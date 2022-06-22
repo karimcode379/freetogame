@@ -1,13 +1,18 @@
+
 import data from '../data';
 import GameItem_Top4PC from './GameItem_Top4PC';
 
-const TopFourPC = () => {
+/*import React, { useState, useEffect } from 'react';
+import GameItem from './GameItem';*/
 
-    const topFourPC = [];
-    topFourPC.push(data[data.findIndex(obj => obj.id === 515)])
-    topFourPC.push(data[data.findIndex(obj => obj.id === 516)])
-    topFourPC.push(data[data.findIndex(obj => obj.id === 517)])
-    topFourPC.push(data[data.findIndex(obj => obj.id === 519)])
+const TopFourPC = (props) => {
+
+    const data = props.data;
+    let one = data.filter(obj => obj.id == 475);
+    let two = data.filter(obj => obj.id == 516);
+    let three = data.filter(obj => obj.id == 57);
+    let four = data.filter(obj => obj.id == 1);
+    const topFourPC = one.concat(two).concat(three).concat(four);
 
     return (<main className="top4PCGrid">
 
@@ -23,8 +28,6 @@ const TopFourPC = () => {
                 genre={elt.genre}
             />
         )}
-
-
     </main>);
 }
 

@@ -1,51 +1,67 @@
-// import vector from '../img/Vector 1.svg';
-// import games from '../img/Games.png';
-// import plus from '../img/Union.png';
-// import { useState } from 'react';
-// import { Link } from "react-router-dom";
+import vector from '../img/Home.png';
+import games from '../img/Games.png';
+import plus from '../img/plus.png';
+import { useState } from 'react';
+import { NavLink } from "react-router-dom";
+import redlog from '../img/logo.png';
+import freetogame from '../img/Free2Game.png';
 
+const NavBar = () => {
+    const [slide, setSlide] = useState(true);
+    const [topWidth, setTopWidth] = useState("95vw");
+    let menu = () => {
+        setSlide(false);
+        setTopWidth(false);
+    }
+    let notMenu = () => {
+        setSlide(true);
+        setTopWidth(true);
+    }
+    return (
+        <section className="Navigation">
+            <section style={{ width: topWidth ? "95vw" : "83vw" }}>
+                <div>
+                    <img src={redlog} alt="freetogame-logo" />
+                    <img src={freetogame} alt="freetogame-letters" />
+                </div>
+                <form action="" className="form">
+                    <input type="text" name="" id="search" />
+                </form>
+            </section>
+            <div className=" nav relativeParent">
+                <nav className="flexColumn">
+                    <section className="burger" onClick={menu}>
+                        <div className="burgerMeat"></div>
+                        <div className="burgerMeat"></div>
+                        <div className="burgerMeat"></div>
+                    </section>
+                    <div className="flexColumn">
+                        <NavLink className={({ isActive }) => isActive ? "redButton" : "blackButton"} to="/home">
+                            <img src={vector} alt="house" />
+                        </NavLink>
+                        <NavLink className={({ isActive }) => isActive ? "redButton" : "blackButton"} to="/all">
+                            <img src={games} alt="gamepad" />
+                        </NavLink>
+                        <NavLink className={({ isActive }) => isActive ? "redButton" : "blackButton"} to="/recently">
+                            <img src={plus} alt="plus" />
+                        </NavLink>
+                    </div>
+                </nav>
 
-// const NavBar = () => {
+                <section className={slide ? "noSlideMenu" : "slideMenu"}>
+                    <section>
+                        <div className="rightX" onClick={notMenu}>x</div>
+                    </section>
+                    <div className="flexColumnHide hideSideLinks">
+                        <NavLink className={({ isActive }) => isActive ? "redButtonHide" : ""} to="/home"><img src={vector} alt=" house" />Home</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? "redButtonHide" : ""} to="/all"><img src={games} alt=" gamepad" />All Games</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? "redButtonHide" : ""} to="/recently"><img src={plus} alt=" plus" />recently Added</NavLink>
+                    </div>
+                </section>
+            </div >
+        </section >
 
-//     const [slide, setSlide] = useState(true);
-//     let menu = () => {
-//         setSlide(false);
-//     }
+    );
+}
 
-//     let notMenu = () => {
-//         setSlide(true);
-//     }
-//     return (
-//         <div className="relativeParent">
-//             <nav className="flexColumn">
-//                 <section onClick={menu}>
-//                     <div></div>
-//                     <div></div>
-//                     <div></div>
-//                 </section>
-//                 <div className="flexColumn">
-//                     <Link to="/"><img className="navImg" src={vector} alt="house" /></Link>
-//                     <Link to="/all"><img className="navImg navGamepad" src={games} alt="gamepad" /></Link>
-//                     <Link to="/recently"><img className="navImg" src={plus} alt="plus" /></Link>
-//                 </div>
-//             </nav>
-
-//             {/* className={slide ? "noSlideMenu" : "slideMenu"} */}
-//             <section className={slide ? "noSlideMenu" : "slideMenu"}>
-//                 <section>
-//                     <div className="rightX" onClick={notMenu}>x</div>
-//                 </section>
-//                 <div className="flexColumnHide">
-//                     <Link to="/" className="aTag flexRow "><img className="navImg smallImg" src={vector} alt=" house" />Home</Link>
-//                     <Link to="/all" className="aTag flexRow"><img className="navImg navGamepad" src={games} alt=" gamepad" />All Games</Link>
-//                     <Link to="/recently" className="aTag flexRow"><img className="navImg smallImg" src={plus} alt=" plus" />Recently Added</Link>
-//                 </div>
-
-//             </section>
-
-//         </div >
-
-//     );
-// }
-
-// export default NavBar;
+export default NavBar;

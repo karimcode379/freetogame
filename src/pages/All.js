@@ -1,6 +1,6 @@
 import data from './../data';
-import GameItem from './../components/GameItem';
-import Header from './../components/Header';
+import GameList from './../components/GameList';
+/*import Header from './../components/Header';*/
 import AllGames_Header from './../components/AllGames_Header';
 
 
@@ -23,6 +23,8 @@ const All = () => {
                 }
             </div>
         </div >
+            <GameList />
+        </div>
     );
 };
 
