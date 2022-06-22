@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import GameItem from './GameItem';
+
+import GameItem_Top4Browser from './GameItem_Top4Browser';
 
 const TopFourBrowser = (props) => {
 
@@ -13,7 +13,7 @@ const TopFourBrowser = (props) => {
     return (
         <div className="top4BrowserGrid">
             {topFourBrowser.map(elt =>
-                <GameItem
+                <GameItem_Top4Browser
                     key={elt.id}
                     id={elt.id}
                     thumbnail={elt.thumbnail}

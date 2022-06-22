@@ -157,6 +157,31 @@ header {
     TOP 4 GAMES FOR PC
 =============================== */
 
+<<<<<<< HEAD
+=======
+
+.top4PC {
+  border-radius: 50px;
+  background: #102130;
+}
+
+.GameItem_Top4PC {
+  border-radius: 30px;
+  background: #102130;
+}
+
+.top4PCGrid {
+  display: grid;
+  padding: 0 7% 0 10%;
+  margin-bottom: 10vh;
+  gap: 2%;
+  grid-template-areas:
+    'A B'
+    'A C'
+    'A D';
+}
+
+>>>>>>> main
 .top4PCGrid {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -239,7 +264,17 @@ html {
   align-items: center;
 }
 
+<<<<<<< HEAD
 .burger {
+=======
+.GameItem_Top4PC:nth-of-type(2) img,
+.GameItem_Top4PC:nth-of-type(3) img,
+.GameItem_Top4PC:nth-of-type(4) img {
+  width: 63%;
+}
+
+/*.burger {
+>>>>>>> main
   margin: 10px 0 15vh 0;
 }
 
@@ -269,6 +304,10 @@ html {
   padding: 0 0 0 0;
   margin: 5vh auto 5vw 0;
 }
+<<<<<<< HEAD
+=======
+*/
+>>>>>>> main
 
 /* **************************
           hideNav
@@ -306,6 +345,16 @@ html {
   left: -250px;
 }
 
+<<<<<<< HEAD
+=======
+/* PLATTFORM, GENRE */
+.top4PC_bottomIcons {
+  border: none;
+  margin: 0 0 -35vh 65%;
+}
+
+/*
+>>>>>>> main
 .hideNav {
   width: 17vw;
   height: 100vh;

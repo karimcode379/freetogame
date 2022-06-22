@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import GameItem from './GameItem';
+import GameItem_Top4PC from './GameItem_Top4PC';
 
 const TopFourPC = (props) => {
 
@@ -10,19 +9,20 @@ const TopFourPC = (props) => {
     let four = data.filter(obj => obj.id == 1);
     const topFourPC = one.concat(two).concat(three).concat(four);
 
-    return (<div className="top4PCGrid">
-        {topFourPC.map(elt =>
-            <GameItem
-                key={elt.id}
-                id={elt.id}
-                thumbnail={elt.thumbnail}
-                title={elt.title}
-                short_description={elt.short_description}
-                platform={elt.platform}
-                genre={elt.genre}
-            />
-        )}
-    </div>);
+    return (
+        <main className="top4PCGrid">
+            {topFourPC.map(elt =>
+                <GameItem_Top4PC
+                    key={elt.id}
+                    id={elt.id}
+                    thumbnail={elt.thumbnail}
+                    title={elt.title}
+                    short_description={elt.short_description}
+                    platform={elt.platform}
+                    genre={elt.genre}
+                />
+            )}
+        </main>);
 }
 
 export default TopFourPC;

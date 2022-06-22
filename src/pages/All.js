@@ -1,13 +1,12 @@
-import Header from './../components/Header';
+import AllGames_Header from './../components/AllGames_Header';
 import React, { useState, useEffect } from 'react';
 import GameItem from './../components/GameItem';
+
 
 
 const All = () => {
 
     const [data, setData] = useState([]);
-
-    // const [azArr, setAzArr] = useState([]);
 
     useEffect(() => {
         const options = {
@@ -29,21 +28,15 @@ const All = () => {
     }, []);
 
 
-    const pushToAzArr = () => {
-        // setData([]);
-        // data.sort((a, b) => a.title.localeCompare(b.title));
+    const sortAZ = () => {
         setData((data) => data.slice().sort((a, b) => a.title.localeCompare(b.title)));
         console.log(data);
-        // setData(arr);
     }
-    useEffect(() => {
-
-    }, []);
-    console.log(data)
 
     return (
         <div>
-            <div>
+            <AllGames_Header />
+            <div className="gameItemGrid">
                 {data.map(elt =>
                     <GameItem
                         key={elt.id}
@@ -56,8 +49,8 @@ const All = () => {
                         data={data}
                     />
                 )}
-                <button onClick={pushToAzArr}>A-Z</button>
             </div >
+            <button onClick={sortAZ}>A-Z</button>
         </div>
     );
 };

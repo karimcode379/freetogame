@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import GameItem from './GameItem';
 
 const RecentlyFour = (props) => {
