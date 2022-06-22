@@ -277,6 +277,9 @@ h3 {
 .GameItem {
   border-radius: 24px;
   background: #102130;
+  /* max-width: 285px;
+  margin: 0 auto;
+  display: block; */
 }
 
 /* Container */
@@ -352,6 +355,7 @@ h3 {
   display: inline;
   font-family: "Oswald";
   font-size: 15px;
+  background: #102130;
 }
 
 .cardPlattform img {
@@ -366,6 +370,7 @@ h3 {
   margin-left: 5%;
   font-family: "Oswald";
   font-size: 15px;
+  background: #102130;
 }
 
 /* ============================
@@ -422,11 +427,13 @@ TOP 4 GAMES FOR PC
 .GameItem_Top4PC:nth-of-type(1) {
   grid-area: A;
   /* background: orange; */
+  /* background: url('./img/Genshin.png') 100% center / cover no-repeat; */
   width: 36vw;
 }
 
 .GameItem_Top4PC:nth-of-type(1) img {
   width: 100%;
+  object-fit: cover;
 }
 
 /* FIRST RIGHT Grid Item  */
