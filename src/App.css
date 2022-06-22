@@ -1,3 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================
+        GENERAL STYLES
+#fff Color
+#385470 Searchbar
+#102130 Cards, Items
+#040F14 Background
+#FF4654 Buttons
+=============================== */
+
+body {
+  background: #040F14;
+  color: #fff;
+}
+
+.searchbar {
+  background: #385470;
+  padding: 5vh 10%;
+  border-radius: 50px;
+}
+
+button,
+a {
+  font-family: Impact;
+  background: #FF4654;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  padding: 1vh 10%;
+  border-radius: 10px;
+}
+
+.buttonShowMore {
+  width: 10%;
+  margin: 0 75%;
+}
+
+.title {
+  text-align: left;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0 0 5vh 10%;
+}
+
+h2 {
+  font-family: Impact;
+  font-size: 1.5em;
+  margin: 0 0 5vh 10%;
+}
+
+h3 {
+  margin-bottom: 5vh;
+}
+
+/* ============================
+        HEADER
+=============================== */
+
+header {
+  height: 5vh;
+  background: #040F14;
+}
+
+/* ============================
+        GAME ITEM
+=============================== */
+
+.GameItem {
+  border-radius: 50px;
+  background: #102130;
+}
+
+/* Container */
+.gameItemGrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.gridItem {
+  /* grid-area: 'A'; */
+}
+
+.gameCard img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 3vh;
+}
+
+.gameCard {
+  margin: 0 0 5vh 10%;
+  background: #102130;
+  width: 20%;
+  object-fit: cover;
+  border-radius: 25px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.cardBody {
+  font-family: Arial;
+  margin: 0 0 5vh 10%;
+}
+
+/* Description */
+.cardBody p {
+  margin-bottom: 5vh;
+  padding-right: 10%;
+}
+
+/* Read More */
+.cardButton {
+  /* margin-left: 25%; */
+}
+
+/* Card Bottom */
+.bottomIcons {
+  border-top: 1px solid #fff;
+  margin: 0 10%;
+}
+
+.cardPlattform {
+  border: 1px solid #FF4654;
+  border-radius: 7px;
+  display: inline;
+  font-family: Impact, sans-serif;
+}
+
+.cardPlattform img {
+  margin: 2vh 10%;
+}
+
+.cardGenre {
+  border: 1px solid #FF4654;
+  border-radius: 7px;
+  display: inline;
+  margin-left: 2%;
+  font-family: Impact, sans-serif;
+}
+
+/* ============================
+    TOP 4 GAMES FOR BROWSER
+=============================== */
+
+.top4BrowserGrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+/* ============================
+    TOP 4 GAMES FOR PC
+=============================== */
+
+.top4PCGrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
 /********************************* 
             GENERALS
 *********************************/
@@ -167,6 +331,7 @@ html {
 
 .hideSideLinks>a {
   text-decoration: none;
+
   color: white;
   font-size: 24px;
   height: 50px;

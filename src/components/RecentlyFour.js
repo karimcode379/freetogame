@@ -1,36 +1,31 @@
 import React, { useState, useEffect } from 'react';
-
 import data from './../data';
 import GameItem from './GameItem';
 
-const RecentlyFour = () => {
+const RecentlyFour = (props) => {
 
-    const sortedRecently = data.sort((a, b) => b.id - a.id);
-    const [recentlyFour, setRecentlyFour] = useState([]);
+    const data = props.data;
+    data.sort((a, b) => b.id - a.id);
+    const recentlyFour = data.splice(0, 4);
 
-    useEffect(() => {
-        getDataHandler();
-    }, []);
+    console.log(data);
 
-    const getDataHandler = () => {
-        for (let i = 0; i < 4; i++) {
-            setRecentlyFour(recentlyFour => [...recentlyFour, sortedRecently[i]])
-        }
-    };
+    return (
+        <main className="gameItemGrid">
+            {recentlyFour.map((elt) =>
+                <GameItem
+                    key={elt.id}
+                    id={elt.id}
+                    thumbnail={elt.thumbnail}
+                    title={elt.title}
+                    short_description={elt.short_description}
+                    platform={elt.platform}
+                    genre={elt.genre}
+                />
+            )
+            }
 
-    return (<div>
-        {recentlyFour.map(elt =>
-            <GameItem
-                key={elt.id}
-                id={elt.id}
-                thumbnail={elt.thumbnail}
-                title={elt.title}
-                short_description={elt.short_description}
-                platform={elt.platform}
-                genre={elt.genre}
-            />
-        )}
-    </div>);
+        </main>);
 }
 
 export default RecentlyFour;

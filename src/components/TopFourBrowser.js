@@ -1,27 +1,30 @@
-import data from '../data';
+import React, { useState, useEffect } from 'react';
 import GameItem from './GameItem';
 
-const TopFourBrowser = () => {
+const TopFourBrowser = (props) => {
 
-    const topFourPC = [];
-    topFourPC.push(data[data.findIndex(obj => obj.id === 515)])
-    topFourPC.push(data[data.findIndex(obj => obj.id === 516)])
-    topFourPC.push(data[data.findIndex(obj => obj.id === 517)])
-    topFourPC.push(data[data.findIndex(obj => obj.id === 519)])
+    const data = props.data;
+    let one = data.filter(obj => obj.id == 365);
+    let two = data.filter(obj => obj.id == 353);
+    let three = data.filter(obj => obj.id == 458);
+    let four = data.filter(obj => obj.id == 358);
+    const topFourBrowser = one.concat(two).concat(three).concat(four);
 
-    return (<div>
-        {topFourPC.map(elt =>
-            <GameItem
-                key={elt.id}
-                id={elt.id}
-                thumbnail={elt.thumbnail}
-                title={elt.title}
-                short_description={elt.short_description}
-                platform={elt.platform}
-                genre={elt.genre}
-            />
-        )}
-    </div>);
+    return (
+        <div className="top4BrowserGrid">
+            {topFourBrowser.map(elt =>
+                <GameItem
+                    key={elt.id}
+                    id={elt.id}
+                    thumbnail={elt.thumbnail}
+                    title={elt.title}
+                    short_description={elt.short_description}
+                    platform={elt.platform}
+                    genre={elt.genre}
+                />
+            )}
+        </div>
+    );
 }
 
 export default TopFourBrowser;
