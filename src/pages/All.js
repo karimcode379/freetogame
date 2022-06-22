@@ -1,8 +1,6 @@
 import Header from './../components/Header';
 import React, { useState, useEffect } from 'react';
 import GameItem from './../components/GameItem';
-import AllGames_Header from './../components/AllGames_Header';
-
 
 
 const All = () => {
@@ -31,7 +29,7 @@ const All = () => {
     }, []);
 
 
-    const sortAZ = () => {
+    const pushToAzArr = () => {
         // setData([]);
         // data.sort((a, b) => a.title.localeCompare(b.title));
         setData((data) => data.slice().sort((a, b) => a.title.localeCompare(b.title)));
@@ -45,8 +43,7 @@ const All = () => {
 
     return (
         <div>
-            <AllGames_Header />
-            <div className="gameItemGrid">
+            <div>
                 {data.map(elt =>
                     <GameItem
                         key={elt.id}
@@ -59,8 +56,7 @@ const All = () => {
                         data={data}
                     />
                 )}
-                <button onClick={sortAZ}>A-Z</button>
-                <button onClick={sortAZ}>A-Z</button>
+                <button onClick={pushToAzArr}>A-Z</button>
             </div >
         </div>
     );
