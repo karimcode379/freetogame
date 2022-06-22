@@ -9,7 +9,7 @@ import All from "./pages/All";
 import GameDetail from "./pages/GameDetail";
 import Recently from "./pages/Recently";
 import Home from "./pages/Home"
-
+import NavBar from './components/NavBar';
 
 function App() {
 
@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <NavBar /> */}
+      <NavBar />
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
