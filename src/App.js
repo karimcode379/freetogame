@@ -1,6 +1,6 @@
 import './App.css';
 
-import NavBar from './components/NavBar';
+// import NavBar from './components/NavBar';
 
 import { Route, Routes, Navigate } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
@@ -9,6 +9,8 @@ import All from "./pages/All";
 import GameDetail from "./pages/GameDetail";
 import Recently from "./pages/Recently";
 import Home from "./pages/Home"
+import { useState, useEffect } from 'react';
+import Header from '../src/components/Header';
 
 
 function App() {
@@ -36,7 +38,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
+      {/* <NavBar /> */}
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />

@@ -32,6 +32,7 @@ const Home = () => {
         <div>
             <Header />
             <h2>Recently Added</h2>
+            <RecentlyFour />
             {/* <section className="gameItemGrid">
                 <div className="gridItem"> */}
             <RecentlyFour
@@ -41,8 +42,6 @@ const Home = () => {
                 <Link to="/recently" state={data}>SHOW MORE</Link>
                 {/* <Link to={{ pathname: '/pathname', state: data }}>SHOW MORE</Link> */}
             </button>
-            {/* </div>
-            </section> */}
             <h2>Top 4 Games for PC in June 2021</h2>
             <TopFourPC
                 data={data}
@@ -50,6 +49,10 @@ const Home = () => {
             <button className="buttonShowMore">
                 <Link to="/all" state={data}>SHOW MORE</Link>
             </button>
+
+           /* <h2>Top 4 Games for Browser in June 2022</h2>
+            <TopFourBrowser />*/
+
             <h2>Top 4 Games for Browser in June 2021</h2>
             <TopFourBrowser
                 data={data}
