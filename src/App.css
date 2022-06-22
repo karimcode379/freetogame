@@ -87,7 +87,6 @@ header {
 /* .Logo {
   margin: 2vh 2%;
 }
-
 /* Searchbar */
 /* input[type="text"] {
   background: #385470;
@@ -260,11 +259,9 @@ TOP 4 GAMES FOR PC
   justify-content: space-between;
   align-items: center;
 }
-
 .Navigation>section img:nth-of-type(1) {
   margin: auto 30px;
 }
-
 .form input {
   display: inline-block;
   font-size: 2rem;
@@ -290,7 +287,6 @@ TOP 4 GAMES FOR PC
 .relativeParent {
   position: relative;
 }
-
 .nav {
   position: fixed;
   min-width: 80px;
@@ -303,11 +299,9 @@ TOP 4 GAMES FOR PC
 .burger {
   margin: 10px 0 15vh 0;
 }
-
 .burger:hover {
   cursor: pointer;
 }
-
 .burgerMeat {
   background-color: white;
   height: 3px;
@@ -322,6 +316,7 @@ TOP 4 GAMES FOR PC
   align-items: center
 }
 
+=======
 .redButton {
   background-color: #FF4654;
   height: 50px;
@@ -329,7 +324,6 @@ TOP 4 GAMES FOR PC
   padding: 0 0 0 0;
   margin: 5vh auto 5vh auto;
 }
-
 .blackButton {
   background-color: black;
   height: 50px;
@@ -346,7 +340,6 @@ TOP 4 GAMES FOR PC
   border-radius: 12px;
   padding: 0 15px 0 0;
 }
-
 .relativeParent>section {
   padding-left: 10px;
   min-width: 250px;
@@ -357,7 +350,6 @@ TOP 4 GAMES FOR PC
   flex-direction: column;
   align-items: flex-start;
 }
-
 .slideMenu {
   transition: all 2s;
   height: 100vh;
@@ -485,4 +477,33 @@ TOP 4 GAMES FOR PC
 .top4PC_bottomIcons {
   border: none;
   margin: 0 0 -35vh 65%;
+}
+
+.hideNav {
+  width: 17vw;
+  height: 100vh;
+  background-color: black;
+}
+.flexColumnHide {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.rightX {
+  color: white;
+  font-size: 40px;
+  margin: 0 0 15vh 14vw;
+}
+.rightX:hover {
+  cursor: pointer;
+}
+.hideSideLinks>a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  height: 50px;
+  margin: 5vh auto 5vw 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
