@@ -21,7 +21,6 @@ const GameList = () => {
                 })
                 .catch(err => console.error(err));
         }
-        console.log(data)
         getDataHandler();
     }, []);
 

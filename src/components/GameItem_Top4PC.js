@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// import WindowsIcon from 'src/img/WindowsIcon.png';
+import WindowsIcon from './../img/WindowsIcon.png';
 
 const GameItem_Top4PC = (props) => {
     return (
@@ -8,7 +8,6 @@ const GameItem_Top4PC = (props) => {
             {/* Card Body - Title, Description, Read More */}
             <div className="top4PC_cardBody">
                 <h4 className="top4PC_h4">{props.title}</h4>
-                {/* <p>{props.short_description}</p> */}
                 <button className="top4PC_cardButton">
                     <Link to={`/gamedetail/${props.id}`}>READ MORE</Link></button>
             </div>

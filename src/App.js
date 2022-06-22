@@ -7,8 +7,6 @@ import All from "./pages/All";
 import GameDetail from "./pages/GameDetail";
 import Recently from "./pages/Recently";
 import Home from "./pages/Home"
-import { useState, useEffect } from 'react';
-import Header from '../src/components/Header';
 
 
 function App() {

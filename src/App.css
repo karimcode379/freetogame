@@ -240,6 +240,7 @@ TOP 4 GAMES FOR PC
     'A B'
     'A C'
     'A D';
+}
 
 .top4PCGrid {
   display: grid;
@@ -354,6 +355,7 @@ html {
 .GameItem_Top4PC:nth-of-type(3) img,
 .GameItem_Top4PC:nth-of-type(4) img {
   width: 63%;
+}
 
 /*.burger {
   margin: 10px 0 15vh 0;
@@ -386,7 +388,7 @@ html {
   margin: 5vh auto 5vw 0;
 }
 */
-  
+
 /* **************************
           hideNav
 ************************** */
@@ -454,6 +456,8 @@ html {
 .top4PC_bottomIcons {
   border: none;
   margin: 0 0 -35vh 65%;
+}
+
 /*
 .hideNav {
   width: 17vw;

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// import WindowsIcon from 'src/img/WindowsIcon.png';
+import WindowsIcon from './../img/WindowsIcon.png';
 
 const GameItem = (props) => {
   return (
