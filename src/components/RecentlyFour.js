@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import data from './../data';
 import GameItem from './GameItem';
 
 const RecentlyFour = (props) => {
@@ -7,8 +5,6 @@ const RecentlyFour = (props) => {
     const data = props.data;
     data.sort((a, b) => b.id - a.id);
     const recentlyFour = data.splice(0, 4);
-
-    console.log(data);
 
     return (
         <main className="gameItemGrid">
@@ -24,8 +20,7 @@ const RecentlyFour = (props) => {
                 />
             )
             }
-
-        </main>);
+        </main >);
 }
 
 export default RecentlyFour;

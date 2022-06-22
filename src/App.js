@@ -1,14 +1,13 @@
 import './App.css';
 
-import NavBar from './components/NavBar';
+// import NavBar from './components/NavBar';
 
 import { Route, Routes, Navigate } from "react-router-dom";
 import All from "./pages/All";
 import GameDetail from "./pages/GameDetail";
 import Recently from "./pages/Recently";
 import Home from "./pages/Home"
-import { useState, useEffect } from 'react';
-
+import NavBar from './components/NavBar';
 
 function App() {
 
