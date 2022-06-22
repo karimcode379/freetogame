@@ -7,13 +7,13 @@ const GameItem_Top4PC = (props) => {
             <img src={props.thumbnail} alt="" className="thumbnail_top4PC" />
             {/* Card Body - Title, Description, Read More */}
             <div className="top4PC_cardBody">
-                <h4>{props.title}</h4>
+                <h4 className="top4PC_h4">{props.title}</h4>
                 {/* <p>{props.short_description}</p> */}
-                <button className="cardButton">
+                <button className="top4PC_cardButton">
                     <Link to={`/gamedetail/${props.id}`}>READ MORE</Link></button>
             </div>
             {/* Bottom Icons - Plattform + Genre */}
-            <div className="bottomIcons">
+            <div className="top4PC_bottomIcons">
                 <div className="cardPlattform">
                     <img src={props.platform === "Windows" ? "a" : "b"} alt="Plattform" /></div>
                 <div className="cardGenre">{props.genre}</div>

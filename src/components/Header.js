@@ -9,11 +9,11 @@ const Header = (data) => {
     console.log(data);
     return (
         <header>
-            <nav>
+            {/* <nav>
                 <img src={LogoIcon} alt="Logo Free2Game" className="Logo" />
                 <input type="text"></input>
                 <input type="submit" value="🔍"></input>
-            </nav>
+            </nav> */}
             <h1>FIND & TRACK THE BEST FREE-TO-PLAY GAMES!</h1>
             <img src={Home_Header} alt="Header" className="Hero" />
         </header>
