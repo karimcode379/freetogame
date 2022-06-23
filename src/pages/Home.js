@@ -38,6 +38,8 @@ const Home = () => {
             <button className="buttonShowMore">
                 <Link to="/recently" state={data}>SHOW MORE</Link>
             </button>
+            {/* </div>
+            </section> */}
             <h2>Top 4 Games for PC in June 2021</h2>
             <TopFourPC
                 data={data}
