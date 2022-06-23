@@ -43,7 +43,7 @@ const NavBar = () => {
         return data.filter((item) => {
             if (item.title.toLowerCase().includes(input.toLowerCase())) {
                 setResult(result => [...result, item])
-            } else if (item.publisher == input) {
+            } else if (item.publisher.toLowerCase().includes(input.toLowerCase())) {
                 setResult(result => [...result, item])
             } else if (item.developer.toLowerCase().includes(input.toLowerCase())) {
                 setResult(result => [...result, item])
@@ -52,6 +52,7 @@ const NavBar = () => {
             } else if (item.platform.toLowerCase().includes(input.toLowerCase())) {
                 setResult(result => [...result, item])
             }
+            return null;
         });
     }
 

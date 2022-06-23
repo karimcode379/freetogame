@@ -1,4 +1,4 @@
-import AllGames_Header from './../components/AllGames_Header';
+import AllGamesHeader from './../components/AllGames_Header';
 import React, { useState, useEffect } from 'react';
 import GameItem from './../components/GameItem';
 import { useLocation } from 'react-router-dom';
@@ -30,7 +30,7 @@ const All = () => {
                 .catch(err => console.error(err));
         }
         getDataHandler();
-    }, []);
+    }, [location.state]);
 
     const sortBy = (e) => {
         const options = {
@@ -74,7 +74,7 @@ const All = () => {
 
     return (
         <div>
-            <AllGames_Header />
+            <AllGamesHeader />
             <div className="question_container">
                 <div>
                     <div className="question">

@@ -25,7 +25,7 @@ const GameDetail = () => {
         }
         getDataHandler();
 
-    }, [])
+    }, [id])
 
     return (
         <div>
