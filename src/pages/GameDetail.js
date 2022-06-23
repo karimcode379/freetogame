@@ -25,76 +25,73 @@ const GameDetail = () => {
         }
         getDataHandler();
 
-    }, [])
+    }, [id])
 
     return (
         <div>
-            {data && <div>
-                <h1>Hallo</h1>
-                <h1>{data.title}</h1>
-                <div>
-                    <img src={data.thumbnail} alt="" />
-                    <h2>Plattform: {data.plattform}</h2>
-                    <div>{data.genre}</div>
-                    <a href={data.game_url} target="_blank" rel="noreferrer">PLAY NOW</a>
-                </div>
-                <div>
-                    <h2>About</h2>
-                    <p>{data.description}</p>
-                </div>
-                <div>
-                    <img src={data.screenshots[0].image} alt="" />
-                    <img src={data.screenshots[1].image} alt="" />
-                </div>
-                <div>
-                    <div>
-                        <h2>Additional Information</h2>
-                        <p>Please note this free-to-play game may or may not offer optional in-game purchases.</p>
-                        <div>
-                            <div>Developer</div>
-                            <div>{data.developer}</div>
-                            <div>Publisher</div>
-                            <div>{data.publisher}</div>
-                            <div>Release Date</div>
-                            <div>{data.release_date}</div>
+            {data &&
+                <div className="GameDetailContainer">
+                    <img src={data.thumbnail} alt="" className="GameDetailHero" />
+                    <div className="Flexbasis">
+                        <div className="LeftFlexbasis">
+                            <h5>{data.title}</h5>
+                            <img src={data.thumbnail} alt="" className="GameDetailThumbnail" />
+                            <h6>Plattform: {data.plattform}</h6>
+                            <div className="GameDetailBottomIcons">
+                                <div className="cardGenre">{data.genre}</div>
+                                <button className="ButtonPlayNow">
+                                    <a href={data.game_url} target="_blank" rel="noreferrer">PLAY NOW</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div className="RightFlexbasis">
+                            <h2 className="GameDetailAbout">About</h2>
+                            <p>{data.description}</p>
                         </div>
                     </div>
                     <div>
-                        {data.minimum_system_requirements &&
-                            <div>
-                                <h2>Minimum System Requriements &#40;Windows&#41;</h2>
-                                {/* Grid im nächsten div? */}
-                                <div>
-                                    <div>
-                                        <div>OS</div>
+                        <img src={data.screenshots[0].image} alt="" className="GameDetailScreenshot" />
+                        <img src={data.screenshots[1].image} alt="" className="GameDetailScreenshot" />
+                    </div>
+                    <div>
+                        <div className="GameDetailGrid">
+                            <div className="GridItem1">Additional Information</div>
+                            <p className="GridItem2">Please note this free-to-play game may or may not offer optional in-game purchases.</p>
+                            <div className="GridItem3"><span>Developer</span> {data.developer}</div>
+                            <div className="GridItem4"><span>Publisher</span> {data.publisher}</div>
+                            <div className="GridItem5"><span>Release Date</span> {data.release_date}</div>
+                            {data.minimum_system_requirements &&
+                                <div className="GameDetailGridRight">
+                                    <div className="GridItem6">Minimum System Requirements &#40;Windows&#41;</div>
+                                    <div className="GridItem7">
+                                        <span>OS</span>
                                         <div>{data.minimum_system_requirements.os}</div>
                                     </div>
-                                    <div>
-                                        <div>Processor</div>
+                                    <div className="GridItem8">
+                                        <span>Processor</span>
                                         <div>{data.minimum_system_requirements.processor}</div>
                                     </div>
-                                    <div>
-                                        <div>Memory</div>
+                                    <div className="GridItem9">
+                                        <span>Memory</span>
                                         <div>{data.minimum_system_requirements.memory}</div>
                                     </div>
-                                    <div>
-                                        <div>Graphics</div>
+                                    <div className="GridItem10">
+                                        <span>Graphics</span>
                                         <div>{data.minimum_system_requirements.os}</div>
                                     </div>
-                                    <div>
-                                        <div>Storage</div>
+                                    <div className="GridItem11">
+                                        <span>Storage</span>
                                         <div>{data.minimum_system_requirements.storage}</div>
                                     </div>
-                                    <div>
-                                        <div>Additional Notes</div>
+                                    <div className="GridItem12">
+                                        <span>Additional Notes</span>
                                         <div>Specifications may change during development</div>
                                     </div>
                                 </div>
-                            </div>
-                        }
+                            }
+                        </div>
                     </div>
-                </div>
-            </div>}
+                </div>}
         </div>
     );
 }

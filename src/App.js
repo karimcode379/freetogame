@@ -7,6 +7,8 @@ import All from "./pages/All";
 import GameDetail from "./pages/GameDetail";
 import Recently from "./pages/Recently";
 import Home from "./pages/Home"
+import Refresher from './pages/Refresher';
+
 import NavBar from './components/NavBar';
 
 function App() {
@@ -40,6 +42,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/all" element={<All data={data} />} />
         <Route path="/gamedetail/:id" element={<GameDetail />} />
+        <Route path="/refresher" element={<Refresher />} />
         <Route path="/recently" element={<Recently data={data} />} />
       </Routes>
     </div>

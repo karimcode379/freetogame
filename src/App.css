@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
 
 * {
   margin: 0;
@@ -7,7 +8,7 @@
 }
 
 /* ============================
-        GENERAL STYLES
+GENERAL STYLES
 #fff Color
 #385470 Searchbar
 #102130 Cards, Items
@@ -22,6 +23,7 @@ body {
 
 button {
   font-family: "Oswald";
+  font-size: 18px;
   background: #ff4654;
   color: #fff;
   border: none;
@@ -48,18 +50,16 @@ a {
   margin-bottom: 10vh;
 }
 
-.title {
-  text-align: left;
-}
-
+/* HEADER HEADLINE */
 h1 {
-  font-size: 4em;
+  font-size: 48px;
   margin: 45vh 0 5vh 10%;
-  width: 30%;
+  width: 25%;
   font-family: "Oswald";
   position: absolute;
 }
 
+/* SECTION TITLE - Recently Added, Top 4 Games */
 h2 {
   font-family: "Oswald";
   font-size: 1.5em;
@@ -243,6 +243,8 @@ TOP 4 GAMES FOR PC
 .top4PCGrid {
   display: grid;
   grid-template-columns: auto auto auto auto;
+  font-size: 24px;
+  margin: 0 0 5vh 10%;
 }
 
 /* ******************************** 
@@ -357,6 +359,7 @@ TOP 4 GAMES FOR PC
 }
 
 .slideMenu {
+  transition: all 0.5s;
   height: 100vh;
   overflow: hidden;
   position: fixed;
@@ -369,7 +372,7 @@ TOP 4 GAMES FOR PC
   overflow: hidden;
   position: absolute;
   top: 0;
-  left: -250px;
+  left: -350px;
 }
 
 .hideNav {
@@ -387,6 +390,7 @@ TOP 4 GAMES FOR PC
 .rightX {
   color: white;
   font-size: 40px;
+  text-align: right;
   margin: 0 0 15vh 14vw;
 }
 
@@ -405,26 +409,198 @@ TOP 4 GAMES FOR PC
   align-items: center;
 }
 
-.thumbnail_top4PC:nth-of-type(1) {
-  border-radius: 30px;
+.hideNav {
+  width: 17vw;
+  height: 100vh;
+  background-color: black;
 }
 
-/* LEFT Grid Item  */
+/* ============================
+HEADER
+=============================== */
+
+header {
+  height: 90vh;
+  background: #040f14;
+}
+
+.Hero {
+  width: 100%;
+  /* border-radius: 50px; */
+  max-width: 1600px;
+  min-width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* ============================
+GAME ITEM
+=============================== */
+
+/* ITEM / CARDS TITLE */
+h3 {
+  margin-bottom: 5vh;
+  font-size: 18px;
+  font-family: "Oswald";
+}
+
+/* Items / Cards an sich */
+.GameItem {
+  border-radius: 24px;
+  background: #102130;
+  margin: 5px;
+  /* max-width: 285px;
+  margin: 0 auto;
+  display: block; */
+}
+
+/* Container */
+.gameItemGrid,
+.top4BrowserGrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin-bottom: 50px;
+  /* margin: 0 auto; */
+  padding: 0 40% 0 8%;
+  /* max-width: 500px; */
+  /* margin-left: 160px; */
+}
+
+.gameCard img,
+.thumbnail {
+  width: 20vw;
+  border-radius: 24px;
+  margin-bottom: 3vh;
+}
+
+.cardBody {
+  font-family: Arial;
+  margin: 0 0 5vh 10%;
+  height: 25vh;
+}
+
+/* Description */
+.cardBody p {
+  font-family: "Titillium Web", sans-serif;
+  color: #afc7df;
+  font-size: 16px;
+  padding-right: 10%;
+  height: 110px;
+  overflow: hidden;
+  text-overflow: "...";
+  text-overflow: ellipsis;
+}
+
+/* Read More Button */
+.cardButton {
+  padding: 1vh 10%;
+}
+
+/* Card Bottom */
+.bottomIcons {
+  border-top: 1px solid #fff;
+  margin: 25px 10%;
+  padding: 25px 0;
+}
+
+.cardPlattform {
+  border: 1px solid #ff4654;
+  padding: 6px 12px;
+  border-radius: 15px;
+  display: inline;
+  font-family: "Oswald";
+  font-size: 15px;
+  background: #102130;
+}
+
+/* .CardPlattformImg,
+.cardPlattform img {
+  margin: 0 10%; 
+} */
+
+.cardGenre {
+  border: 1px solid #ff4654;
+  padding: 6px 12px;
+  border-radius: 15px;
+  display: inline;
+  margin-left: 5%;
+  font-family: "Oswald";
+  font-size: 15px;
+  background: #102130;
+}
+
+/* ============================
+    TOP 4 GAMES FOR BROWSER
+=============================== */
+
+.top4BrowserGrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.top4Browser_cardBody {
+  font-family: Arial;
+  margin: 0 0 5vh 10%;
+  height: 12vh;
+}
+
+/* ============================
+TOP 4 GAMES FOR PC
+=============================== */
+
+.top4PC {
+  border-radius: 50px;
+  background: #102130;
+}
+
+.GameItem_Top4PC {
+  border-radius: 30px;
+  background: #102130;
+}
+
+.top4PCGrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 0 7% 0 10%;
+  margin-bottom: 10vh;
+  gap: 2%;
+  grid-template-areas:
+    "A B"
+    "A C"
+    "A D";
+}
+
+/* LEFT Grid Item - TOP 1  */
 .GameItem_Top4PC:nth-of-type(1) {
   grid-area: A;
-  background: orange;
+  /* background: orange; */
+  /* background: url('./img/Genshin.png') 100% center / cover no-repeat; */
   width: 36vw;
+  /* width: 500px; */
+  position: relative;
 }
 
-.GameItem_Top4PC:nth-of-type(1) img {
-  width: 100%;
-}
-
-/* FIRST RIGHT Grid Item  */
+/* FIRST RIGHT Grid Item - TOP 2 */
 .GameItem_Top4PC:nth-of-type(2) {
   grid-area: B;
   height: 30vh;
   width: 45vw;
+}
+
+/* RIGHT Grid Items - Thumbnails */
+.GameItem_Top4PC:nth-of-type(2) img:nth-of-type(1),
+.GameItem_Top4PC:nth-of-type(3) img:nth-of-type(1),
+.GameItem_Top4PC:nth-of-type(4) img:nth-of-type(1) {
+  width: 63%;
+}
+
+/* PLATTFORM IMAGE - Windows / Browser */
+.GameItem_Top4PC:nth-of-type(1) img:nth-of-type(1) {
+  background: pink;
+}
+
+#Top4PCCardPlattformImg {
+  width: 5%;
 }
 
 .GameItem_Top4PC:nth-of-type(3) {
@@ -437,79 +613,295 @@ TOP 4 GAMES FOR PC
   height: 30vh;
 }
 
-.GameItem_Top4PC:nth-of-type(2) img,
-.GameItem_Top4PC:nth-of-type(3) img,
-.GameItem_Top4PC:nth-of-type(4) img {
+/* GENSHIN BOTTM ICONS */
+.GameItem_Top4PC:nth-of-type(1) .top4PC_cardBody {
+  background: purple;
+  margin: 10%;
+}
+
+/* READ MORE BUTTON */
+.GameItem_Top4PC:nth-of-type(2) .top4PC_cardButton,
+.GameItem_Top4PC:nth-of-type(3) .top4PC_cardButton,
+.GameItem_Top4PC:nth-of-type(4) .top4PC_cardButton {
+  margin: 0 0 15vh 65%;
+  padding: 1vh 3%;
+}
+
+/* Genshin Button */
+.GameItem_Top4PC:nth-of-type(1) .top4PC_cardButton {
+  padding: 1vh 3%;
+  position: absolute;
+  z-index: 9999;
+  margin-top: -30vh;
+}
+
+/* Genshin Thumbnail */
+.thumbnail_top4PC:nth-of-type(1) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+/* Thumbnails right side */
+/* .thumbnail_top4PC,
+.thumbnail_top4PC:nth-of-type(3),
+.thumbnail_top4PC:nth-of-type(4) {
+  border-radius: 30px;
   width: 63%;
+} */
+
+/* Genshin Title */
+.GameItem_Top4PC:nth-of-type(1) h4 {
+  font-family: "Oswald";
+  font-size: 48px;
+  /* margin-bottom: 36px; */
+  margin-bottom: 30vh;
+  position: absolute;
+  z-index: 999;
 }
 
 /* RIGHT TITLES */
 .GameItem_Top4PC:nth-of-type(2) h4,
 .GameItem_Top4PC:nth-of-type(3) h4,
 .GameItem_Top4PC:nth-of-type(4) h4 {
-  font-size: 1em;
-  margin-top: -20vh;
-  margin-left: 65%;
-}
-
-.GameItem_Top4PC:nth-of-type(1) .top4PC_cardBody {
-  background: purple;
-}
-
-.GameItem_Top4PC:nth-of-type(1) .top4PC_cardButton {
-  margin: 0 0 -15vh 10%;
-  background: blue;
-}
-
-.top4PC_bottomIcons:nth-of-type(1) {
-  margin: 0 0 40vh 0;
-}
-
-.GameItem_Top4PC:nth-of-type(2) h4,
-.GameItem_Top4PC:nth-of-type(3) h4,
-.GameItem_Top4PC:nth-of-type(4) h4 {
-  font-size: 1em;
-}
-
-.GameItem_Top4PC:nth-of-type(1) h4 {
-  background-color: aqua;
-  margin-bottom: -20vh;
+  font-size: 18px;
+  margin: -25vh 0 36px 65%;
+  font-family: "Oswald";
 }
 
 /* PLATTFORM, GENRE */
+.GameItem_Top4PC:nth-of-type(2) .top4PC_bottomIcons,
+.GameItem_Top4PC:nth-of-type(3) .top4PC_bottomIcons,
+.GameItem_Top4PC:nth-of-type(4) .top4PC_bottomIcons {
+  margin: -12vh 0 0 65%;
+}
+
+.GameItem_Top4PC:nth-of-type(1) .top4PC_bottomIcons {
+  margin-left: 10%;
+  margin-top: -15vh;
+}
+
 .top4PC_bottomIcons {
   border: none;
   margin: 0 0 -35vh 65%;
 }
 
-.hideNav {
-  width: 17vw;
-  height: 100vh;
-  background-color: black;
+/* ============================
+GAME DETAIL
+=============================== */
+
+.GameDetailHero {
+  width: 100%;
+  height: 55vh;
+  border-radius: 50px;
+  /* max-width: 1600px;
+  min-width: 300px;
+  margin: 0 auto;
+  display: block; */
+  object-fit: cover;
 }
 
-.flexColumnHide {
+.GameDetailContainer {
+  margin-left: 10%;
+}
+
+.GameDetailScreenshot {
+  width: 45%;
+  border-radius: 24px;
+  margin-right: 25px;
+}
+
+.Flexbasis {
   display: flex;
-  flex-direction: column;
-  text-align: center;
+  padding: 0 10%;
 }
 
-.rightX {
-  color: white;
-  font-size: 40px;
-  margin: 0 0 15vh 14vw;
+.LeftFlexbasis {
+  flex-basis: 50%;
 }
 
-.rightX:hover {
-  cursor: pointer;
+.RightFlexbasis {
+  flex-basis: 50%;
+  margin: 150px 0 150px 75px;
 }
 
 .hideSideLinks > a {
   text-decoration: none;
   color: white;
+}
+
+.RightFlexbasis p {
+  width: 400px;
+  margin-left: 75px;
+  line-height: 25px;
+  font-family: "Titillium Web", sans-serif;
+}
+
+/* TITLE */
+h5 {
+  font-family: "Oswald";
+  font-size: 48px;
+  margin: 80px 0 0 0;
+  width: 25%;
+  position: absolute;
+}
+
+/* PLATTFORM */
+h6 {
+  font-family: "Oswald";
   font-size: 24px;
-  height: 50px;
-  margin: 5vh auto 5vw 0;
+  margin: 40px 0 20px 20px;
+}
+
+.GameDetailThumbnail {
+  border-radius: 24px;
+  width: 500px;
+  margin: 180px 0 0 0;
+}
+
+.GameDetailBottomIcons {
+  margin: 40px 0 0 -20px;
+}
+
+.ButtonPlayNow {
+  padding: 1vh 2%;
+  margin: 40px 35px 0;
+  display: block;
+}
+
+.GameDetailGrid {
+  font-family: "Titillium Web", sans-serif;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: repeat(5, 10vh);
+  margin-top: 100px;
+  padding-left: 2%;
+}
+
+/* ADDITIONAL INFORMATION */
+.GridItem1 {
+  font-family: "Oswald";
+  font-size: 24px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+/* PLEASE NOTE */
+.GridItem2 {
+  width: 65%;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+/* DEVELOPER */
+.GridItem3 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+/* PUBLISHER */
+.GridItem4 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+/* DEVELOPER NAME */
+.GridItem5 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+span {
+  font-family: "Oswald";
+  font-size: 18px;
+}
+
+.GameDetailGridRight {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(6, 10vh);
+  padding-left: 8%;
+}
+
+/* MINIMUM */
+.GridItem6 {
+  font-family: "Oswald";
+  font-size: 24px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+/* OS */
+.GridItem7 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+/* PROCESSOR */
+.GridItem8 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+/* Memory */
+.GridItem9 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+/* Graphics */
+.GridItem10 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+/* Storage */
+.GridItem11 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+/* Additional Notes */
+.GridItem12 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+/* ============================
+        FILTER
+=============================== */
+.question_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0 40% 0 8%;
+}
+
+.question {
   display: flex;
   justify-content: center;
   align-items: center;

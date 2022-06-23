@@ -1,15 +1,18 @@
-import AllGames_Header from "./../components/AllGames_Header";
+import AllGamesHeader from "./../components/AllGames_Header";
 import React, { useState, useEffect } from "react";
 import GameItem from "./../components/GameItem";
+import { useLocation } from "react-router-dom";
 
 const All = () => {
   const [data, setData] = useState([]);
+  const location = useLocation();
   const [showData, setShowData] = useState([]);
   const [visible1, setVisibility1] = useState(true);
   const [visible2, setVisibility2] = useState(true);
   const [visible3, setVisibility3] = useState(true);
 
   useEffect(() => {
+    location.state && setShowData(location.state);
     const options = {
       method: "GET",
       headers: {
@@ -29,7 +32,7 @@ const All = () => {
         .catch((err) => console.error(err));
     };
     getDataHandler();
-  }, []);
+  }, [location.state]);
 
   const sortBy = (e) => {
     const options = {
@@ -57,33 +60,28 @@ const All = () => {
         .slice()
         .sort((a, b) => a.title.localeCompare(b.title))
     );
-    console.log(showData);
   };
 
   const genreFilter = (e) => {
     console.log(e.target.value);
     setShowData(data.slice().filter((elt) => elt.genre === e.target.value));
-    console.log(showData);
   };
 
   const plattformFilterBrowser = () => {
     setShowData(data.slice().filter((elt) => elt.platform === "Web Browser"));
-    console.log(showData);
   };
 
   const plattformFilterWindows = () => {
     setShowData(data.slice().filter((elt) => elt.platform === "PC (Windows)"));
-    console.log(showData);
   };
 
   const allPlattforms = () => {
     setShowData(data.slice());
-    console.log(showData);
   };
 
   return (
     <div>
-      <AllGames_Header />
+      <AllGamesHeader />
       <div className="question_container">
         <div className="allAround">
           <div className="question">
