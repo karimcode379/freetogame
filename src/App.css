@@ -486,6 +486,134 @@ TOP 4 GAMES FOR PC
   margin: 0 0 -35vh 65%;
 }
 
+/* ******************************** 
+              top
+******************************** */
+
+.Navigation>section {
+  margin: 0 auto 0 5vw;
+  position: fixed;
+  right: 0;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Navigation>section img:nth-of-type(1) {
+  margin: auto 30px;
+}
+
+.form input {
+  display: inline-block;
+  font-size: 2rem;
+  margin: auto 30px;
+  line-height: 2.5rem;
+  border: none;
+  border-radius: 12px;
+  width: 23vw;
+  color: white;
+  padding-left: 10px;
+  background-color: #375470;
+  background-image: url('./img/Search.png');
+  background-size: initial;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 90%;
+}
+
+/* ******************************** 
+              NAV
+******************************** */
+
+.relativeParent {
+  position: relative;
+}
+
+.nav {
+  position: fixed;
+  min-width: 80px;
+  width: 5vw;
+  height: 100vh;
+  background-color: black;
+  border-right: 1px solid white;
+}
+
+.burger {
+  margin: 10px 0 15vh 0;
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+
+.burgerMeat {
+  background-color: white;
+  height: 3px;
+  width: 3vw;
+  border-radius: 5px;
+  margin: 7px;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.redButton {
+  background-color: #FF4654;
+  height: 50px;
+  border-radius: 12px;
+  padding: 0 0 0 0;
+  margin: 5vh auto 5vh auto;
+}
+
+.blackButton {
+  background-color: black;
+  height: 50px;
+  border-radius: 12px;
+  padding: 0 0 0 0;
+  margin: 5vh auto 5vh auto;
+}
+
+/* **************************
+          hideNav
+************************** */
+.redButtonHide {
+  background-color: #FF4654;
+  border-radius: 12px;
+  padding: 0 15px 0 0;
+}
+
+.relativeParent>section {
+  padding-left: 10px;
+  min-width: 250px;
+  width: 17vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.slideMenu {
+  transition: all 0.5s;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 5px
+}
+
+.noSlideMenu {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: -350px;
+}
+
 .hideNav {
   width: 17vw;
   height: 100vh;
@@ -501,6 +629,7 @@ TOP 4 GAMES FOR PC
 .rightX {
   color: white;
   font-size: 40px;
+  text-align: right;
   margin: 0 0 15vh 14vw;
 }
 
@@ -513,8 +642,14 @@ TOP 4 GAMES FOR PC
   color: white;
   font-size: 24px;
   height: 50px;
-  margin: 5vh auto 5vw 0;
+  margin: 5vh auto 5vh 0;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hideNav {
+  width: 17vw;
+  height: 100vh;
+  background-color: black;
 }
