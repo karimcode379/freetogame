@@ -1,16 +1,19 @@
 import AllGames_Header from './../components/AllGames_Header';
 import React, { useState, useEffect } from 'react';
 import GameItem from './../components/GameItem';
-
-
+import { useLocation } from 'react-router-dom';
 
 const All = () => {
 
     const [data, setData] = useState([]);
+    const location = useLocation();
     const [showData, setShowData] = useState([]);
-    const [visible, setVisibility] = useState(true);
+    const [visible1, setVisibility1] = useState(true);
+    const [visible2, setVisibility2] = useState(true);
+    const [visible3, setVisibility3] = useState(true);
 
     useEffect(() => {
+        location.state && setShowData(location.state);
         const options = {
             method: 'GET',
             headers: {
@@ -49,68 +52,135 @@ const All = () => {
 
     const sortAZ = () => {
         setShowData((showData[0] ? showData : data).slice().sort((a, b) => a.title.localeCompare(b.title)));
-        console.log(showData);
     }
 
     const genreFilter = (e) => {
         console.log(e.target.value)
         setShowData(data.slice().filter(elt => elt.genre === e.target.value))
-        console.log(showData);
     }
 
     const plattformFilterBrowser = () => {
         setShowData(data.slice().filter(elt => elt.platform === 'Web Browser'))
-        console.log(showData);
     }
 
     const plattformFilterWindows = () => {
         setShowData(data.slice().filter(elt => elt.platform === 'PC (Windows)'))
-        console.log(showData);
     }
 
     const allPlattforms = () => {
         setShowData(data.slice())
-        console.log(showData);
     }
 
 
     return (
         <div>
             <AllGames_Header />
-            <button onClick={sortAZ}>A-Z</button>
-            <button value="Shooter" onClick={genreFilter}>Genre Filter</button>
-            <button onClick={plattformFilterBrowser}>Platform Filter Browser</button>
-            <button onClick={plattformFilterWindows}>Platform Filter Windows</button>
-            <div className="question">
-                <p>PLATTFORM</p>
-                <div onClick={() => setVisibility(!visible)}>{visible ? 'V' : 'Ʌ'}</div>
-            </div>
-            <div style={{ display: visible ? 'none' : 'block', backgroundColor: 'darkgrey' }}>
-                <div className='question'>
-                    <div onClick={allPlattforms}>All Plattforms</div>
-                    <div onClick={plattformFilterWindows}>Windows (PC)</div>
-                    <div onClick={plattformFilterBrowser}>Browser (Web)</div>
+            <div className="question_container">
+                <div>
+                    <div className="question">
+                        <p>PLATTFORM</p>
+                        <div onClick={() => setVisibility1(!visible1)}>
+                            {visible1 ? "V" : "Ʌ"}
+                        </div>
+                    </div>
+                    <div className="question_dropdown_container"
+                        style={{
+                            display: visible1 ? "none" : "flex",
+                            backgroundColor: "darkgrey",
+                        }}>
+                        <button onClick={allPlattforms}>All Plattforms</button>
+                        <button onClick={plattformFilterWindows}>Windows (PC)</button>
+                        <button onClick={plattformFilterBrowser}>Browser (Web)</button>
+                    </div>
                 </div>
-            </div>
-            <div className="question">
-                <p>GENRE/TAG</p>
-                <div onClick={() => setVisibility(!visible)}>{visible ? 'V' : 'Ʌ'}</div>
-            </div>
-            <div style={{ display: visible ? 'none' : 'block', backgroundColor: 'darkgrey' }}>
-                <div className='question'>
-                    <button value="Shooter" onClick={genreFilter}>Genre Filter</button>
+                <div>
+                    <div className="question">
+                        <p>GENRE/TAG</p>
+                        <div onClick={() => setVisibility2(!visible2)}>
+                            {visible2 ? "V" : "Ʌ"}
+                        </div>
+                    </div>
+                    <div
+                        className="question_dropdown_container"
+                        style={{
+                            display: visible2 ? "none" : "flex",
+                            backgroundColor: "darkgrey",
+                        }}
+                    >
+
+                        <button value="ARPG" onClick={genreFilter}>
+                            ARPG
+                        </button>
+                        <button value="Card" onClick={genreFilter}>
+                            Card
+                        </button>
+                        <button value="Fantasy" onClick={genreFilter}>
+                            Fantasy
+                        </button>
+                        <button value="Fighting" onClick={genreFilter}>
+                            Fighting
+                        </button>
+                        <button value="MMO" onClick={genreFilter}>
+                            MMO
+                        </button>
+                        <button value="MMOARPG" onClick={genreFilter}>
+                            MMOARPG
+                        </button>
+                        <button value="MMORPG" onClick={genreFilter}>
+                            MMORPG
+                        </button>
+                        <button value="MOBA" onClick={genreFilter}>
+                            MOBA
+                        </button>
+                        <button value="Racing" onClick={genreFilter}>
+                            Racing
+                        </button>
+                        <button value="Shooter" onClick={genreFilter}>
+                            Shooter
+                        </button>
+                        <button value="Social" onClick={genreFilter}>
+                            Social
+                        </button>
+                        <button value="Sports" onClick={genreFilter}>
+                            Sports
+                        </button>
+                        <button value="Strategy" onClick={genreFilter}>
+                            Strategy
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div className="question">
-                <p>SORT BY</p>
-                <div onClick={() => setVisibility(!visible)}>{visible ? 'V' : 'Ʌ'}</div>
-            </div>
-            <div style={{ display: visible ? 'none' : 'block', backgroundColor: 'darkgrey' }}>
-                <div className='question'>
-                    <button value="relevance" onClick={sortBy}>Relevance</button>
-                    <button value="release-date" onClick={sortBy}>Release-Date</button>
-                    <button value="popularity" onClick={sortBy}>Popularity</button>
-                    <button value="alphabetical" onClick={sortAZ}>Alphabetical</button>
+                <div>
+                    <div className="question">
+                        <p>SORT BY</p>
+                        <div onClick={() => setVisibility3(!visible3)}>
+                            {visible3 ? "V" : "Ʌ"}
+                        </div>
+                    </div>
+                    <div
+                        className="question_dropdown_container"
+                        style={{
+                            display: visible3 ? "none" : "flex",
+                            backgroundColor: "darkgrey",
+                        }}
+                    >
+
+                        <button value="relevance" onClick={sortBy}>
+                            Relevance
+                        </button>
+                        <button value="release-date" onClick={sortBy}>
+                            Release-Date
+                        </button>
+                        <button value="popularity" onClick={sortBy}>
+                            Popularity
+                        </button>
+                        <button value="alphabetical" onClick={sortAZ}>
+                            Alphabetical
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <div className="question">
+                    </div>
                 </div>
             </div>
             <div className="gameItemGrid">
