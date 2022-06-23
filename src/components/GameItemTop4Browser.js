@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import WindowsIcon from './../img/WindowsIcon.png';
 import BrowserIcon from './../img/BrowserIcon.png';
 
-const GameItem_Top4Browser = (props) => {
+const GameItemTop4Browser = (props) => {
     return (
         <div className="GameItem">
             <img src={props.thumbnail} alt="" className="thumbnail" />
@@ -22,4 +22,4 @@ const GameItem_Top4Browser = (props) => {
     );
 };
 
-export default GameItem_Top4Browser;
+export default GameItemTop4Browser;

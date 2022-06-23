@@ -1,5 +1,5 @@
 
-import GameItem_Top4Browser from './GameItem_Top4Browser';
+import GameItemTop4Browser from './GameItemTop4Browser';
 
 const TopFourBrowser = (props) => {
 
@@ -13,7 +13,7 @@ const TopFourBrowser = (props) => {
     return (
         <div className="top4BrowserGrid">
             {topFourBrowser.map(elt =>
-                <GameItem_Top4Browser
+                <GameItemTop4Browser
                     key={elt.id}
                     id={elt.id}
                     thumbnail={elt.thumbnail}
