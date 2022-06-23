@@ -90,11 +90,6 @@ header {
   display: block
 }
 
-
-/********************************* 
-            GENERALS
-*********************************/
-
 /* ******************************** 
               top
 ******************************** */
@@ -285,9 +280,9 @@ h3 {
   grid-template-columns: auto auto auto auto;
   margin-bottom: 50px;
   /* margin: 0 auto; */
-  padding: 0 40% 0 10%;
-  gap: 5%;
-  max-width: 500px;
+  padding: 0 40% 0 8%;
+  gap: 2%;
+  /* max-width: 500px; */
   /* margin-left: 160px; */
 }
 
@@ -611,40 +606,6 @@ TOP 4 GAMES FOR PC
   border-radius: 30px;
 }
 
-/* LEFT Grid Item  */
-/* .GameItem_Top4PC:nth-of-type(1) {
-  grid-area: A;
-  background: orange;
-  width: 36vw;
-}
-
-.GameItem_Top4PC:nth-of-type(1) img {
-  width: 100%;
-}
-
-/* FIRST RIGHT Grid Item  */
-/* .GameItem_Top4PC:nth-of-type(2) {
-  grid-area: B;
-  height: 30vh;
-  width: 45vw;
-}
-
-.GameItem_Top4PC:nth-of-type(3) {
-  grid-area: C;
-  height: 30vh;
-}
-
-.GameItem_Top4PC:nth-of-type(4) {
-  grid-area: D;
-  height: 30vh;
-} */
-
-/*.GameItem_Top4PC:nth-of-type(2) img,
-.GameItem_Top4PC:nth-of-type(3) img,
-.GameItem_Top4PC:nth-of-type(4) img {
-  width: 63%;
-} */
-
 /* RIGHT TITLES */
 .GameItem_Top4PC:nth-of-type(2) h4,
 .GameItem_Top4PC:nth-of-type(3) h4,
@@ -713,4 +674,204 @@ TOP 4 GAMES FOR PC
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* ============================
+GAME DETAIL
+=============================== */
+
+.GameDetailHero {
+  width: 100%;
+  height: 55vh;
+  border-radius: 50px;
+  /* max-width: 1600px;
+  min-width: 300px;
+  margin: 0 auto;
+  display: block; */
+  object-fit: cover;
+}
+
+.GameDetailContainer {
+  margin-left: 10%;
+}
+
+.GameDetailScreenshot {
+  width: 45%;
+  border-radius: 24px;
+  margin-right: 25px;
+}
+
+.Flexbasis {
+  display: flex;
+  padding: 0 10%;
+}
+
+.LeftFlexbasis {
+  flex-basis: 50%;
+}
+
+.RightFlexbasis {
+  flex-basis: 50%;
+  margin: 150px 0 150px 75px;
+}
+
+.RightFlexbasis p {
+  width: 400px;
+  margin-left: 75px;
+  line-height: 25px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+/* TITLE */
+h5 {
+  font-family: "Oswald";
+  font-size: 48px;
+  margin: 80px 0 0 0;
+  width: 25%;
+  position: absolute;
+}
+
+/* PLATTFORM */
+h6 {
+  font-family: "Oswald";
+  font-size: 24px;
+  margin: 40px 0 20px 20px;
+}
+
+.GameDetailThumbnail {
+  border-radius: 24px;
+  width: 500px;
+  margin: 180px 0 0 0;
+}
+
+.GameDetailBottomIcons {
+  margin: 40px 0 0 -20px;
+}
+
+.ButtonPlayNow {
+  padding: 1vh 2%;
+  margin: 40px 35px 0;
+  display: block;
+}
+
+.GameDetailGrid {
+  font-family: 'Titillium Web', sans-serif;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: repeat(5, 10vh);
+  margin-top: 100px;
+  padding-left: 2%;
+}
+
+/* ADDITIONAL INFORMATION */
+.GridItem1 {
+  font-family: "Oswald";
+  font-size: 24px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+/* PLEASE NOTE */
+.GridItem2 {
+  width: 65%;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+/* DEVELOPER */
+.GridItem3 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+/* PUBLISHER */
+.GridItem4 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+/* DEVELOPER NAME */
+.GridItem5 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+span {
+  font-family: "Oswald";
+  font-size: 18px;
+}
+
+.GameDetailGridRight {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(6, 10vh);
+  padding-left: 8%;
+}
+
+/* MINIMUM */
+.GridItem6 {
+  font-family: "Oswald";
+  font-size: 24px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+/* OS */
+.GridItem7 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+/* PROCESSOR */
+.GridItem8 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+/* Memory */
+.GridItem9 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+/* Graphics */
+.GridItem10 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+/* Storage */
+.GridItem11 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+/* Additional Notes */
+.GridItem12 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
 }

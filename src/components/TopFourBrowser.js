@@ -4,14 +4,14 @@ import GameItemTop4Browser from './GameItemTop4Browser';
 const TopFourBrowser = (props) => {
 
     const data = props.data;
-    let one = data.filter(obj => obj.id == 365);
-    let two = data.filter(obj => obj.id == 353);
-    let three = data.filter(obj => obj.id == 458);
-    let four = data.filter(obj => obj.id == 358);
+    let one = data.filter(obj => obj.id === 365);
+    let two = data.filter(obj => obj.id === 353);
+    let three = data.filter(obj => obj.id === 458);
+    let four = data.filter(obj => obj.id === 358);
     const topFourBrowser = one.concat(two).concat(three).concat(four);
 
     return (
-        <div className="top4BrowserGrid">
+        <div className="gameItemGrid">
             {topFourBrowser.map(elt =>
                 <GameItemTop4Browser
                     key={elt.id}
