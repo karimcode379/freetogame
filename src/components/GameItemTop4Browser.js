@@ -15,7 +15,7 @@ const GameItemTop4Browser = (props) => {
             {/* Bottom Icons - Plattform + Genre */}
             <div className="bottomIcons">
                 <div className="cardPlattform">
-                    <img src={props.platform === "Windows" ? { WindowsIcon } : { BrowserIcon }} alt="Plattform" /></div>
+                    <img src={props.platform === "PC (Windows)" ? WindowsIcon : BrowserIcon} alt="Plattform" className="CardPlattformImg" /></div>
                 <div className="cardGenre">{props.genre}</div>
             </div>
         </div>
