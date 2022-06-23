@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import WindowsIcon from './../img/WindowsIcon.png';
+import BrowserIcon from './../img/BrowserIcon.png';
 
-const GameItem_Top4Browser = (props) => {
+const GameItemTop4Browser = (props) => {
     return (
         <div className="GameItem">
             <img src={props.thumbnail} alt="" className="thumbnail" />
@@ -14,11 +15,11 @@ const GameItem_Top4Browser = (props) => {
             {/* Bottom Icons - Plattform + Genre */}
             <div className="bottomIcons">
                 <div className="cardPlattform">
-                    <img src={props.platform === "Windows" ? "a" : "b"} alt="Plattform" /></div>
+                    <img src={props.platform === "Windows" ? { WindowsIcon } : { BrowserIcon }} alt="Plattform" /></div>
                 <div className="cardGenre">{props.genre}</div>
             </div>
         </div>
     );
 };
 
-export default GameItem_Top4Browser;
+export default GameItemTop4Browser;

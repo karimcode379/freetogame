@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import WindowsIcon from './../img/WindowsIcon.png';
+import BrowserIcon from './../img/BrowserIcon.png';
 
 const GameItem = (props) => {
   return (
     <main className="gameItemGrid">
-      <div className="gridItem">
+      <div className="GameItem">
         {/* <section className="GameItem"> */}
-        <img src={props.thumbnail} alt="" />
+        <img src={props.thumbnail} alt="Thumbnail" className="thumbnail" />
         {/* nächstes div ist für den sichtbaren border-bottom */}
         <div className="cardBody">
           <h3>{props.title}</h3>
@@ -17,7 +18,7 @@ const GameItem = (props) => {
         {/* nächstes div ist für die bottom icons */}
         <div className="bottomIcons">
           <div className="cardPlattform">
-            <img src={props.platform === "Windows" ? "a" : "b"} alt="Plattform" /></div>
+            <img src={props.platform === "Windows" ? { WindowsIcon } : { BrowserIcon }} alt="Plattform" /></div>
           <div className="cardGenre">{props.genre}</div>
         </div>
         {/* </section> */}

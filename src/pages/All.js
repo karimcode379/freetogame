@@ -1,4 +1,4 @@
-import AllGames_Header from './../components/AllGames_Header';
+import AllGamesHeader from '../components/AllGamesHeader';
 import React, { useState, useEffect } from 'react';
 import GameItem from './../components/GameItem';
 
@@ -76,7 +76,7 @@ const All = () => {
 
     return (
         <div>
-            <AllGames_Header />
+            <AllGamesHeader />
             <button onClick={sortAZ}>A-Z</button>
             <button value="Shooter" onClick={genreFilter}>Genre Filter</button>
             <button onClick={plattformFilterBrowser}>Platform Filter Browser</button>

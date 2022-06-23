@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import WindowsIcon from './../img/WindowsIcon.png';
+import BrowserIcon from './../img/BrowserIcon.png';
 
 const GameItem_Top4PC = (props) => {
     return (
@@ -14,7 +15,7 @@ const GameItem_Top4PC = (props) => {
             {/* Bottom Icons - Plattform + Genre */}
             <div className="top4PC_bottomIcons">
                 <div className="cardPlattform">
-                    <img src={props.platform === "Windows" ? "a" : "b"} alt="Plattform" /></div>
+                    <img src={props.platform === "Windows" ? { WindowsIcon } : { BrowserIcon }} alt="Plattform" /></div>
                 <div className="cardGenre">{props.genre}</div>
             </div>
         </div>
