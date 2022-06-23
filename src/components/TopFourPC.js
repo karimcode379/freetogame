@@ -1,4 +1,4 @@
-import GameItem_Top4PC from './GameItem_Top4PC';
+import GameItemTop4PC from './GameItem_Top4PC';
 import React, { useState, useEffect } from 'react';
 
 const TopFourPC = (props) => {
@@ -8,10 +8,10 @@ const TopFourPC = (props) => {
 
 
     const data = props.data;
-    let one = data.filter(obj => obj.id == 475);
-    let two = data.filter(obj => obj.id == 516);
-    let three = data.filter(obj => obj.id == 57);
-    let four = data.filter(obj => obj.id == 1);
+    let one = data.filter(obj => obj.id === 475);
+    let two = data.filter(obj => obj.id === 516);
+    let three = data.filter(obj => obj.id === 57);
+    let four = data.filter(obj => obj.id === 1);
     const topFourPC = two.concat(three).concat(four);
 
     useEffect(() => {
@@ -35,7 +35,7 @@ const TopFourPC = (props) => {
 
     return (
         <main className="top4PCGrid">
-            {data2 && <GameItem_Top4PC
+            {data2 && <GameItemTop4PC
                 key={one.id}
                 id={one.id}
                 thumbnail={data2.screenshots[0].image}
@@ -45,7 +45,7 @@ const TopFourPC = (props) => {
                 genre={one.genre}
             />}
             {data && topFourPC.map(elt =>
-                <GameItem_Top4PC
+                <GameItemTop4PC
                     key={elt.id}
                     id={elt.id}
                     thumbnail={elt.thumbnail}

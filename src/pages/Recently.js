@@ -1,5 +1,5 @@
 import GameItem from './../components/GameItem';
-import Recently_Header from './../components/Recently_Header';
+import RecentlyHeader from './../components/Recently_Header';
 import { useLocation } from 'react-router-dom';
 
 const Recently = (props) => {
@@ -12,7 +12,7 @@ const Recently = (props) => {
 
     return (
         <div>
-            <Recently_Header />
+            <RecentlyHeader />
             <div className="gameItemGrid">
                 {recentlyEight.map(elt =>
                     <GameItem
