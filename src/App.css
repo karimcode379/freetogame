@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
 
 * {
   margin: 0;
@@ -16,13 +16,13 @@
 =============================== */
 
 body {
-  background: #040F14;
+  background: #040f14;
   color: #fff;
 }
 
 button {
   font-family: "Oswald";
-  background: #FF4654;
+  background: #ff4654;
   color: #fff;
   border: none;
   /* padding: 1vh 10%; */
@@ -76,9 +76,8 @@ h3 {
 
 header {
   height: 90vh;
-  background: #040F14;
+  background: #040f14;
 }
-
 
 .Hero {
   width: 100%;
@@ -107,6 +106,7 @@ header {
   width: 50px;
   content: "🔍";
 } */
+
 /* ============================
         GAME ITEM
 =============================== */
@@ -182,7 +182,7 @@ header {
 }
 
 .cardPlattform {
-  border: 1px solid #FF4654;
+  border: 1px solid #ff4654;
   border-radius: 7px;
   display: inline;
   font-family: "Oswald";
@@ -193,7 +193,7 @@ header {
 }
 
 .cardGenre {
-  border: 1px solid #FF4654;
+  border: 1px solid #ff4654;
   border-radius: 7px;
   display: inline;
   margin-left: 2%;
@@ -219,7 +219,6 @@ header {
 TOP 4 GAMES FOR PC
 =============================== */
 
-
 .top4PC {
   border-radius: 50px;
   background: #102130;
@@ -236,9 +235,9 @@ TOP 4 GAMES FOR PC
   margin-bottom: 10vh;
   gap: 2%;
   grid-template-areas:
-    'A B'
-    'A C'
-    'A D';
+    "A B"
+    "A C"
+    "A D";
 }
 
 .top4PCGrid {
@@ -250,7 +249,7 @@ TOP 4 GAMES FOR PC
               top
 ******************************** */
 
-.Navigation>section {
+.Navigation > section {
   margin: 0 auto 0 5vw;
   position: fixed;
   right: 0;
@@ -260,7 +259,7 @@ TOP 4 GAMES FOR PC
   align-items: center;
 }
 
-.Navigation>section img:nth-of-type(1) {
+.Navigation > section img:nth-of-type(1) {
   margin: auto 30px;
 }
 
@@ -275,7 +274,7 @@ TOP 4 GAMES FOR PC
   color: white;
   padding-left: 10px;
   background-color: #375470;
-  background-image: url('./img/Search.png');
+  background-image: url("./img/Search.png");
   background-size: initial;
   background-repeat: no-repeat;
   background-position: right;
@@ -318,11 +317,11 @@ TOP 4 GAMES FOR PC
 .flexColumn {
   display: flex;
   flex-direction: column;
-  align-items: center
+  align-items: center;
 }
 
 .redButton {
-  background-color: #FF4654;
+  background-color: #ff4654;
   height: 50px;
   border-radius: 12px;
   padding: 0 0 0 0;
@@ -341,12 +340,12 @@ TOP 4 GAMES FOR PC
           hideNav
 ************************** */
 .redButtonHide {
-  background-color: #FF4654;
+  background-color: #ff4654;
   border-radius: 12px;
   padding: 0 15px 0 0;
 }
 
-.relativeParent>section {
+.relativeParent > section {
   padding-left: 10px;
   min-width: 250px;
   width: 17vw;
@@ -363,7 +362,7 @@ TOP 4 GAMES FOR PC
   position: fixed;
   top: 0;
   left: 0;
-  margin-left: 5px
+  margin-left: 5px;
 }
 
 .noSlideMenu {
@@ -395,7 +394,7 @@ TOP 4 GAMES FOR PC
   cursor: pointer;
 }
 
-.hideSideLinks>a {
+.hideSideLinks > a {
   text-decoration: none;
   color: white;
   font-size: 24px;
@@ -466,7 +465,6 @@ TOP 4 GAMES FOR PC
   margin: 0 0 40vh 0;
 }
 
-
 .GameItem_Top4PC:nth-of-type(2) h4,
 .GameItem_Top4PC:nth-of-type(3) h4,
 .GameItem_Top4PC:nth-of-type(4) h4 {
@@ -506,7 +504,7 @@ TOP 4 GAMES FOR PC
   cursor: pointer;
 }
 
-.hideSideLinks>a {
+.hideSideLinks > a {
   text-decoration: none;
   color: white;
   font-size: 24px;
@@ -515,4 +513,77 @@ TOP 4 GAMES FOR PC
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* ============================
+        FILTER
+=============================== */
+
+.question_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 5vh 9.2% 5vh 8%;
+  position: relative;
+}
+
+.allAround {
+  background-color: #102130;
+  border-radius: 12px;
+  position: absolute;
+  width: 24.2%;
+  top: -80px;
+}
+
+.allAround:nth-of-type(1) {
+  left: 0.4%;
+}
+
+.allAround:nth-of-type(2) {
+  left: 25.4%;
+}
+
+.allAround:nth-of-type(3) {
+  left: 50.4%;
+}
+
+.question {
+  padding: 1vh 10%;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Oswald";
+  font-size: 18px;
+  background: #ff4654;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  border-radius: 12px;
+  padding: 1.5vh 10%;
+}
+
+.question div {
+  cursor: pointer;
+}
+
+.question_dropdown button {
+  width: 10vw;
+  background-color: #385470;
+}
+
+#blackBox {
+  display: none;
+}
+
+.question_dropdown_container {
+  display: flex;
+  flex-direction: column;
+  /* margin: 0 10px 0 10px; */
+  background-color: #102130;
+}
+
+.dropDownItem {
+  border-radius: 12px;
+  background-color: #385470;
+  font-family: Oswald;
+  margin: 10px;
+  padding: 1.5vh 10%;
 }
