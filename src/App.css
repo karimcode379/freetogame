@@ -86,6 +86,7 @@ h2 {
 
 .form input {
   display: inline-block;
+  position: relative;
   font-size: 2rem;
   margin: auto 30px;
   line-height: 2.5rem;
@@ -100,6 +101,40 @@ h2 {
   background-repeat: no-repeat;
   background-position: right;
   background-position-x: 90%;
+}
+
+/* ******************************** 
+      Ergebnisvorschlaege
+******************************** */
+
+.ergebnisVorschlaege {
+  position: absolute;
+  background-color: rgba(93, 126, 154, 0.8);
+  font-size: 20px;
+  right: 30px;
+}
+
+.ergebnisVorschlaege>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 2px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.ergebnisVorschlaege img {
+  height: 100%;
+}
+
+.ergebnisVorschlaege a {
+  height: 100%;
+}
+
+.vtitle {
+  text-align: right;
+  font-size: 16px;
+  padding-right: 5px
 }
 
 /* ******************************** 
