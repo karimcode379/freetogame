@@ -11,7 +11,7 @@ const All = () => {
     const [visible1, setVisibility1] = useState(true);
     const [visible2, setVisibility2] = useState(true);
     const [visible3, setVisibility3] = useState(true);
-
+    console.log(process.env.REACT_APP_API_KEY);
     useEffect(() => {
         location.state && setShowData(location.state);
         const options = {
@@ -19,7 +19,9 @@ const All = () => {
             headers: {
                 'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
                 'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+
             }
+
         };
         const getDataHandler = () => {
             fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games`, options)
@@ -76,7 +78,7 @@ const All = () => {
         <div>
             <AllGamesHeader />
             <div className="question_container">
-                <div>
+                <div className="allAround">
                     <div className="question">
                         <p>PLATTFORM</p>
                         <div onClick={() => setVisibility1(!visible1)}>
@@ -86,14 +88,14 @@ const All = () => {
                     <div className="question_dropdown_container"
                         style={{
                             display: visible1 ? "none" : "flex",
-                            backgroundColor: "darkgrey",
+                            // backgroundColor: "darkgrey",
                         }}>
-                        <button onClick={allPlattforms}>All Plattforms</button>
-                        <button onClick={plattformFilterWindows}>Windows (PC)</button>
-                        <button onClick={plattformFilterBrowser}>Browser (Web)</button>
+                        <div className="dropDownItem" onClick={allPlattforms}>All Plattforms</div>
+                        <div className="dropDownItem" onClick={plattformFilterWindows}>Windows (PC)</div>
+                        <div className="dropDownItem" onClick={plattformFilterBrowser}>Browser (Web)</div>
                     </div>
                 </div>
-                <div>
+                <div className="allAround">
                     <div className="question">
                         <p>GENRE/TAG</p>
                         <div onClick={() => setVisibility2(!visible2)}>
@@ -104,52 +106,52 @@ const All = () => {
                         className="question_dropdown_container"
                         style={{
                             display: visible2 ? "none" : "flex",
-                            backgroundColor: "darkgrey",
+
                         }}
                     >
 
-                        <button value="ARPG" onClick={genreFilter}>
+                        <div className="dropDownItem" value="ARPG" onClick={genreFilter}>
                             ARPG
-                        </button>
-                        <button value="Card" onClick={genreFilter}>
+                        </div>
+                        <div className="dropDownItem" value="Card" onClick={genreFilter}>
                             Card
-                        </button>
-                        <button value="Fantasy" onClick={genreFilter}>
+                        </div>
+                        <div className="dropDownItem" value="Fantasy" onClick={genreFilter}>
                             Fantasy
-                        </button>
-                        <button value="Fighting" onClick={genreFilter}>
+                        </div>
+                        <div className="dropDownItem" value="Fighting" onClick={genreFilter}>
                             Fighting
-                        </button>
-                        <button value="MMO" onClick={genreFilter}>
+                        </div>
+                        <div className="dropDownItem" value="MMO" onClick={genreFilter}>
                             MMO
-                        </button>
-                        <button value="MMOARPG" onClick={genreFilter}>
+                        </div>
+                        <div className="dropDownItem" value="MMOARPG" onClick={genreFilter}>
                             MMOARPG
-                        </button>
-                        <button value="MMORPG" onClick={genreFilter}>
+                        </div>
+                        <div className="dropDownItem" value="MMORPG" onClick={genreFilter}>
                             MMORPG
-                        </button>
-                        <button value="MOBA" onClick={genreFilter}>
+                        </div>
+                        <div className="dropDownItem" value="MOBA" onClick={genreFilter}>
                             MOBA
-                        </button>
-                        <button value="Racing" onClick={genreFilter}>
+                        </div>
+                        <div className="dropDownItem" value="Racing" onClick={genreFilter}>
                             Racing
-                        </button>
-                        <button value="Shooter" onClick={genreFilter}>
+                        </div>
+                        <div className="dropDownItem" value="Shooter" onClick={genreFilter}>
                             Shooter
-                        </button>
-                        <button value="Social" onClick={genreFilter}>
+                        </div>
+                        <div className="dropDownItem" value="Social" onClick={genreFilter}>
                             Social
-                        </button>
-                        <button value="Sports" onClick={genreFilter}>
+                        </div>
+                        <div className="dropDownItem" value="Sports" onClick={genreFilter}>
                             Sports
-                        </button>
-                        <button value="Strategy" onClick={genreFilter}>
+                        </div>
+                        <div className="dropDownItem" value="Strategy" onClick={genreFilter}>
                             Strategy
-                        </button>
+                        </div>
                     </div>
                 </div>
-                <div>
+                <div className="allAround">
                     <div className="question">
                         <p>SORT BY</p>
                         <div onClick={() => setVisibility3(!visible3)}>
@@ -160,26 +162,26 @@ const All = () => {
                         className="question_dropdown_container"
                         style={{
                             display: visible3 ? "none" : "flex",
-                            backgroundColor: "darkgrey",
+                            // backgroundColor: "darkgrey",
                         }}
                     >
 
-                        <button value="relevance" onClick={sortBy}>
+                        <div className="DropdownItem" value="relevance" onClick={sortBy}>
                             Relevance
-                        </button>
-                        <button value="release-date" onClick={sortBy}>
+                        </div>
+                        <div className="DropdownItem" value="release-date" onClick={sortBy}>
                             Release-Date
-                        </button>
-                        <button value="popularity" onClick={sortBy}>
+                        </div>
+                        <div className="DropdownItem" value="popularity" onClick={sortBy}>
                             Popularity
-                        </button>
-                        <button value="alphabetical" onClick={sortAZ}>
+                        </div>
+                        <div className="DropdownItem" value="alphabetical" onClick={sortAZ}>
                             Alphabetical
-                        </button>
+                        </div>
                     </div>
                 </div>
                 <div>
-                    <div className="question">
+                    <div className="question" id="blackBox">
                     </div>
                 </div>
             </div>
