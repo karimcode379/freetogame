@@ -1,22 +1,41 @@
 import vector from '../img/Home.png';
 import games from '../img/Games.png';
 import plus from '../img/plus.png';
-import { useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import redlog from '../img/logo.png';
 import freetogame from '../img/Free2Game.png';
-import GameItem from './GameItem';
+import Vorschlaege from './Vorschlaege'
 
 const NavBar = () => {
     const [slide, setSlide] = useState(true);
     const [topWidth, setTopWidth] = useState("95vw");
     const location = useLocation();
     const [data, setData] = useState([]);
-    // const [searchPara] = useState(['title', 'publisher', 'developer', 'genre', 'platform']);
     const [result, setResult] = useState([]);
+    const [vorschlaege, setVorschlaege] = useState([]);
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
     const navigate = useNavigate();
+    const ref = useRef()
+
+    useEffect(() => {
+        const checkIfClickedOutside = e => {
+            // If the menu is open and the clicked target is not within the menu,
+            // then close the menu
+            if (isMenuOpen && ref.current && !ref.current.contains(e.target)) {
+                setIsMenuOpen(false)
+            }
+        }
+
+        document.addEventListener("mousedown", checkIfClickedOutside)
+
+        return () => {
+            // Cleanup the event listener
+            document.removeEventListener("mousedown", checkIfClickedOutside)
+        }
+    }, [isMenuOpen])
 
     useEffect(() => {
         const options = {
@@ -36,14 +55,14 @@ const NavBar = () => {
         fetchApi();
     }, []);
 
-    // el.text.toLowerCase().includes(input)
-
     const filterSearch = (e) => {
-        setResult([])
+        setResult([]);
+        setVorschlaege([]);
         const input = e.target.value;
         return data.filter((item) => {
             if (item.title.toLowerCase().includes(input.toLowerCase())) {
-                setResult(result => [...result, item])
+                setResult(result => [...result, item]);
+                showVorschlaege();
             } else if (item.publisher.toLowerCase().includes(input.toLowerCase())) {
                 setResult(result => [...result, item])
             } else if (item.developer.toLowerCase().includes(input.toLowerCase())) {
@@ -55,6 +74,14 @@ const NavBar = () => {
             }
             return null;
         });
+    }
+
+    const showVorschlaege = () => {
+        setVorschlaege(result.slice(0, 5))
+    }
+
+    const clearVorschlaege = () => {
+        setVorschlaege([]);
     }
 
     const keyHandler = (e) => {
@@ -69,7 +96,6 @@ const NavBar = () => {
                     navigate('/all', { state: result })
                 }, 1);
             }
-            console.log(location.pathname);
         }
     }
 
@@ -89,8 +115,20 @@ const NavBar = () => {
                     <img src={redlog} alt="freetogame-logo" />
                     <img src={freetogame} alt="freetogame-letters" />
                 </div>
-                <form action="" className="form">
-                    <input type="text" name="" id="search" onChange={filterSearch} onKeyDown={keyHandler} />
+                <form action="" className="form" ref={ref}>
+                    <input type="text" name="" id="search" onChange={filterSearch} onKeyDown={keyHandler} onClick={() => setIsMenuOpen(oldState => !oldState)} />
+                    {isMenuOpen && (<div className="ergebnisVorschlaege" onClick={clearVorschlaege}>{vorschlaege[0] && vorschlaege.map(elt =>
+                        <Vorschlaege
+                            key={elt.id}
+                            id={elt.id}
+                            thumbnail={elt.thumbnail}
+                            title={elt.title}
+                            short_description={elt.short_description}
+                            platform={elt.platform}
+                            genre={elt.genre}
+                            data={data}
+                        />
+                    )}</div>)}
                 </form>
             </section>
             <div className=" nav relativeParent">
@@ -124,20 +162,6 @@ const NavBar = () => {
                     </div>
                 </section>
             </div >
-            {/* <ul className="searchSearch">
-                {filterSearch(data).map((ele, i) => {
-                    <GameItem
-                        key={i}
-                        id={ele.id}
-                        thumbnail={ele.thumbnail}
-                        title={ele.title}
-                        short_description={ele.short_description}
-                        platform={ele.platform}
-                        genre={ele.genre}
-                        data={data}
-                    />
-                })}
-            </ul> */}
         </section >
 
     );
