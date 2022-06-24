@@ -36,7 +36,7 @@ const GameDetail = () => {
                         <div className="LeftFlexbasis">
                             <h5>{data.title}</h5>
                             <img src={data.thumbnail} alt="" className="GameDetailThumbnail" />
-                            <h6>Plattform: {data.plattform}</h6>
+                            <h6>Plattform: {data.platform}</h6>
                             <div className="GameDetailBottomIcons">
                                 <div className="cardGenre">{data.genre}</div>
                                 <button className="ButtonPlayNow">

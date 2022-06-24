@@ -86,6 +86,7 @@ h2 {
 
 .form input {
   display: inline-block;
+  position: relative;
   font-size: 2rem;
   margin: auto 30px;
   line-height: 2.5rem;
@@ -100,6 +101,40 @@ h2 {
   background-repeat: no-repeat;
   background-position: right;
   background-position-x: 90%;
+}
+
+/* ******************************** 
+      Ergebnisvorschlaege
+******************************** */
+
+.ergebnisVorschlaege {
+  position: absolute;
+  background-color: rgba(93, 126, 154, 0.8);
+  font-size: 20px;
+  right: 30px;
+}
+
+.ergebnisVorschlaege>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 2px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.ergebnisVorschlaege img {
+  height: 100%;
+}
+
+.ergebnisVorschlaege a {
+  height: 100%;
+}
+
+.vtitle {
+  text-align: right;
+  font-size: 16px;
+  padding-right: 5px
 }
 
 /* ******************************** 
@@ -724,21 +759,20 @@ span {
   background-color: #102130;
   border-radius: 12px;
   position: absolute;
-  width: 24.2%;
+  width: 24.5%;
   top: -80px;
 }
 
 .allAround:nth-of-type(1) {
-  left: 0.4%;
+  left: 0.5%;
 }
 
 .allAround:nth-of-type(2) {
-  left: 25.4%;
-
+  left: 25.6%;
 }
 
 .allAround:nth-of-type(3) {
-  left: 50.4%;
+  left: 50.8%;
 }
 
 .question {
@@ -777,8 +811,22 @@ span {
   background-color: #102130;
 }
 
+.scrollContainer {
+  overflow: auto;
+  height: 300px;
+}
+
 .dropDownItem {
   border-radius: 12px;
+  background-color: #385470;
+  font-family: Oswald;
+  margin: 10px;
+  padding: 1.5vh 10%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropDownItem:hover {
   background-color: #385470;
   font-family: Oswald;
   margin: 10px;
