@@ -135,7 +135,7 @@ const NavBar = () => {
                 </form>
             </section>
             <div className=" nav relativeParent">
-                <nav className="flexColumn">†
+                <nav className="flexColumn">
                     <section className="burger" onClick={menu}>
                         <div className="burgerMeat"></div>
                         <div className="burgerMeat"></div>
