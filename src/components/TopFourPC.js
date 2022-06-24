@@ -8,7 +8,6 @@ const TopFourPC = (props) => {
 
 
     const data = props.data;
-    let one = data.filter(obj => obj.id === 475);
     let two = data.filter(obj => obj.id === 516);
     let three = data.filter(obj => obj.id === 57);
     let four = data.filter(obj => obj.id === 1);
@@ -36,13 +35,13 @@ const TopFourPC = (props) => {
     return (
         <main className="top4PCGrid">
             {data2 && <GameItemTop4PC
-                key={one.id}
-                id={one.id}
+                key={data2.id}
+                id={data2.id}
                 thumbnail={data2.screenshots[0].image}
-                title={one.title}
-                short_description={one.short_description}
-                platform={one.platform}
-                genre={one.genre}
+                title={data2.title}
+                short_description={data2.short_description}
+                platform={data2.platform}
+                genre={data2.genre}
             />}
             {data && topFourPC.map(elt =>
                 <GameItemTop4PC

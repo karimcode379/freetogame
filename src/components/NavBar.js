@@ -62,7 +62,6 @@ const NavBar = () => {
         return data.filter((item) => {
             if (item.title.toLowerCase().includes(input.toLowerCase())) {
                 setResult(result => [...result, item]);
-                (result.length > 0) && console.log(result.length);
                 showVorschlaege();
             } else if (item.publisher.toLowerCase().includes(input.toLowerCase())) {
                 setResult(result => [...result, item])
@@ -79,7 +78,6 @@ const NavBar = () => {
 
     const showVorschlaege = () => {
         setVorschlaege(result.slice(0, 5))
-        console.log(vorschlaege)
     }
 
     const clearVorschlaege = () => {
@@ -98,7 +96,6 @@ const NavBar = () => {
                     navigate('/all', { state: result })
                 }, 1);
             }
-            console.log(location.pathname);
         }
     }
 

@@ -3,7 +3,6 @@ import WindowsIcon from '../img/WindowsIcon.png';
 import BrowserIcon from '../img/BrowserIcon.png';
 
 const GameItem = (props) => {
-  console.log(props.platform);
   return (
     <div className="GameItem">
       <img src={props.thumbnail} alt="Thumbnail" className="thumbnail" />
